@@ -19,9 +19,6 @@
 <div class="wrapper">
 
 
-  <!-- Main Sidebar Container -->
-
-
 
     <!-- Main content -->
     <section class="content">
@@ -52,6 +49,9 @@
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
                       <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+                    </div>
+                    <div>
+                    <label for=""><a href="#">Forget password?</a></label>
                     </div>
                   </div>
                 </div>

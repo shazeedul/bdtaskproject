@@ -6,12 +6,8 @@
     margin-top: 25px;
 }
 
-.wrapper{
-    background-color: palegreen;
-    
+body{
+    background-image: url(../../dist/img/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.content{
-    background-color: peru;
-}
-
