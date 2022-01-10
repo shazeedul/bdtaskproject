@@ -24,14 +24,14 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-        <div class="col-md-3 col-sm-3 col-xl-4">
+        <div class="col-md-4 col-sm-3 col-xl-4">
         </div>
           <!-- left column -->
-          <div class="col-md-3 col-sm-3 col-xl-4 col-xs-12 mt-4 pt-4">
+          <div class="col-md-3 col-sm-3 col-xl-3 col-xs-12 mt-4 pt-4">
             <!-- jquery validation -->
-            <div class="card card-primary">
+            <div class="card card-info">
               <div class="card-header">
-                <h3 class="card-title">Admin<small>Login</small></h3>
+                <h3 class="card-title">Admin<small> Login</small></h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -50,17 +50,19 @@
                       <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
                       <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
                     </div>
-                    <div>
-                    <label for=""><a href="#">Forget password?</a></label>
-                    </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Login</button>
                 </div>
+                
               </form>
+              
             </div>
+            <footer class="text-center ">
+                  <div><b>Copyright &copy; 2022 All rights are reserved.<br> Design by <a class="text-info" href="#">Bdtaskproject</a></b></div>
+                </footer>
             <!-- /.card -->
             </div>
           <!--/.col (left) -->

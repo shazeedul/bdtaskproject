@@ -1,14 +1,14 @@
 .card-header{
-    background-color: lightgreen !important;
+    background-color:  !important;
 }
 
 .row{
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
-body{
-    background-image: url(../../dist/img/login.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 
+
+.btn{
+    background-color: lightseagreen;
+    
 }
