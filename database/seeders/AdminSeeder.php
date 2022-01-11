@@ -18,10 +18,10 @@ class AdminSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'f_name' => Str::random(10),
-            'l_name' => Str::random(10),
-            'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('password'),
+            'f_name' => 'syed',
+            'l_name' => 'shazeedul',
+            'email' => 'syedshazeedul'.'@gmail.com',
+            'password' => Hash::make('shazeed'),
             'status' => 1,
             'is_admin' => 1,
             'created_at' => new DateTime(),

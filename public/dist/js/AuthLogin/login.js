@@ -1,9 +1,9 @@
 $(function () {
-    $.validator.setDefaults({
+    /*$.validator.setDefaults({
       submitHandler: function () {
         alert( "Form successful submitted!" );
       }
-    });
+    });*/
     $('#quickForm').validate({
       rules: {
         email: {

@@ -35,7 +35,8 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm">
+              <form id="quickForm" method="POST" action="{{route('adminlogin')}}">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
@@ -47,7 +48,7 @@
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+                      <input type="checkbox" name="terms" value="1" class="custom-control-input" id="exampleCheck1">
                       <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
                     </div>
                   </div>
