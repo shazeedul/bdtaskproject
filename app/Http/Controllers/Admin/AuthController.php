@@ -20,6 +20,9 @@ class AuthController extends Controller
             'password' => 'required',
             'terms' => 'required|max:1'
         ]);
+        echo $request -> input('email');
+        die();
+
     }
 }
 
