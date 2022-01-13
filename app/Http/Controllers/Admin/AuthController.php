@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -12,16 +14,37 @@ class AuthController extends Controller
         return view('Admin/auth');
     }
     public function postLogin(Request $request){
-        /*echo "<pre>";
-        print_r($request);
-        die();*/
-        $validated = $request -> validate([
-            'email' => 'requied|max:20|email:rfc,dns',
-            'password' => 'required',
-            'terms' => 'required|max:1'
-        ]);
-        echo $request -> input('email');
-        die();
+        // $validated = $request -> validate([
+        //     'email' => 'required|max:20|email:rfc,dns',
+        //     'password' => 'required',
+        //     'terms' => 'required|max:1'
+        // ]);
+        $email = $request -> input('email');
+        $password = $request -> input('password');
+        $terms = $request -> input('terms');
+        $users = DB::table('users')
+                ->select('*')
+                ->where('email', $email)
+                ->where('status', 1)
+                ->first();
+
+                if($users){
+                    if(Hash::check($password, $users->password)){
+                        echo "Password match";
+                    }else{
+                        echo "Wrong password";
+                    }
+                }else{
+                    echo "Wrong Email";
+                }
+
+
+
+            // var_dump($users);
+
+                // echo $users->email.'<br>';
+                // echo $users->status;
+                
 
     }
 }
