@@ -30,7 +30,12 @@ class AuthController extends Controller
 
                 if($users){
                     if(Hash::check($password, $users->password)){
-                        echo "Password match";
+                        $request->session()->put('admin', $users);
+                        print_r($request->session()->put('admin', $users));
+                        return redirect('dashboard');
+
+                        // echo "Password match";
+
                     }else{
                         echo "Wrong password";
                     }
@@ -40,10 +45,6 @@ class AuthController extends Controller
 
 
 
-            // var_dump($users);
-
-                // echo $users->email.'<br>';
-                // echo $users->status;
                 
 
     }

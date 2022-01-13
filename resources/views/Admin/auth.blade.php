@@ -30,6 +30,7 @@
           <div class="col-md-3 col-sm-3 col-xl-3 col-xs-12 mt-4 pt-4">
             <!-- jquery validation -->
             <div class="card card-info">
+              @if
               <div class="card-header">
                 <h3 class="card-title">Admin<small> Login</small></h3>
               </div>
