@@ -15,14 +15,13 @@ class AuthController extends Controller
         return view('Admin/auth');
     }
     public function postLogin(Request $request){
-        // $validated = $request ->validate([
-        //     'email' => 'required|max:20|email:rfc,dns',
-        //     'password' => 'required',
-        //     'terms' => 'required|max:1'
-        // ]);
+        $validated = $request ->validate([
+            'email' => 'required|max:50|email:rfc,dns',
+            'password' => 'required',
+            'terms' => 'required|max:1'
+        ]);
         $email = $request -> input('email');
         $password = $request -> input('password');
-        $terms = $request -> input('terms');
         $users = DB::table('users')
                 ->select('*')
                 ->where('email', $email)
@@ -31,8 +30,19 @@ class AuthController extends Controller
 
                 if($users){
                     if(Hash::check($password, $users->password)){
-                        $request->session()->put('admin', $users);
-                        print_r($request->session()->put('admin'));
+                        $data = array(
+                            'email' => $email,
+                            'f_name' => $users->f_name,
+                            'l_name' => $users->l_name,
+                            'is_login' => 1,
+                            'is_admin' => 1
+                        );
+
+                        $request->session()->put('admin', (object)$data);
+                        // echo "<pre>";
+                        
+                        // print_r($request->session()->get('admin'));
+                        // die();
                         return redirect('dashboard');
 
                         // echo "Password match";
