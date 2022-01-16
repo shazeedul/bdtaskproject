@@ -30,13 +30,17 @@
           <div class="col-md-3 col-sm-3 col-xl-3 col-xs-12 mt-4 pt-4">
             <!-- jquery validation -->
             <div class="card card-info">
-              @if
+            @if($errors->any())
+              <div class="alert alert-danger">
+                  {{$errors->first()}}
+              </div>
+              @endif
               <div class="card-header">
                 <h3 class="card-title">Admin<small> Login</small></h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm" method="POST" action="{{route('adminlogin')}}">
+              <form method="POST" action="{{route('adminlogin')}}" id="quickForm">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">

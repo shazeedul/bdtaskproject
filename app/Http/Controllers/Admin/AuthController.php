@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class AuthController extends Controller
 {
@@ -14,7 +15,7 @@ class AuthController extends Controller
         return view('Admin/auth');
     }
     public function postLogin(Request $request){
-        // $validated = $request -> validate([
+        // $validated = $request ->validate([
         //     'email' => 'required|max:20|email:rfc,dns',
         //     'password' => 'required',
         //     'terms' => 'required|max:1'
@@ -31,17 +32,19 @@ class AuthController extends Controller
                 if($users){
                     if(Hash::check($password, $users->password)){
                         $request->session()->put('admin', $users);
-                        print_r($request->session()->put('admin', $users));
+                        print_r($request->session()->put('admin'));
                         return redirect('dashboard');
 
                         // echo "Password match";
 
                     }else{
-                        echo "Wrong password";
+                        return Redirect::back()->withErrors(['error' => 'Wrong Password']);
                     }
+                    
                 }else{
-                    echo "Wrong Email";
+                    return Redirect::back()->withErrors(['error' => 'Wrong Email']);
                 }
+                
 
 
 
