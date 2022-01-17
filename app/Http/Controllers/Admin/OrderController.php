@@ -10,5 +10,6 @@ class OrderController extends Controller
     //
     public function index(){
         echo "new order";
+        die();
     }
 }

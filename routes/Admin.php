@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/neworder', 'App\Http\Controllers\Admin\OrderController@index')->name('neworder');
+Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 
