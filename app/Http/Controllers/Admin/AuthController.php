@@ -7,11 +7,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Session;
 
 class AuthController extends Controller
 {
     //
     public function index(){
+        
+        $check = Session::get('admin');
+        if($check){
+
+            return redirect('dashboard');
+
+        }
         return view('Admin/auth');
     }
     public function postLogin(Request $request){

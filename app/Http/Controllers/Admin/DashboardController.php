@@ -22,9 +22,12 @@ class DashboardController extends Controller
         // print_r($check);
 
         return view('Admin/dashboard');
+
+        
     }
     public function logout(){
         Session::flush('admin');
+        return redirect('admin');
     }
     
 }

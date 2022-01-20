@@ -9,7 +9,8 @@ class OrderController extends Controller
 {
     //
     public function index(){
-        echo "new order";
-        die();
+        // echo "new order";
+        // die();
+        return view('Admin/neworder');
     }
 }

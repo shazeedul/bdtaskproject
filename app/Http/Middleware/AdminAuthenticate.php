@@ -19,8 +19,6 @@ class AdminAuthenticate
         $check = $request->session()->get('admin');
         if(!$check){
             return redirect('admin');
-        }else{
-            return redirect('dashboard');
         }
         return $next($request);
     }
