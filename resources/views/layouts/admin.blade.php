@@ -75,6 +75,13 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="btn btn-primary" href="{{route('logout')}}" role="button">Logout
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+          
+        
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -211,6 +218,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{route('logout')}}" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+
 
         </ul>
       </nav>
