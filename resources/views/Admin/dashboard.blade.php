@@ -224,5 +224,5 @@
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-  </div>
+</div>
 @endsection('content')
