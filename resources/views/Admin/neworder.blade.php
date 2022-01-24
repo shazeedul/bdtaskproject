@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="content-wrapper">
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
-            <h1>Product order List</h1>
+            <h1>New order List</h1>
             <div class="row d-flex justify-content-between p-2 ">
                 <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
                 
@@ -13,9 +13,9 @@
             <table class="table table-white   table-hover">
                 <thead class="">
                     <tr>
-                        <th scope="col">Orders #</th>
+                        <th scope="col">Orders ID</th>
                         <th scope="col">Product Name</th>
-                        <th scope="col">Total</th>
+                        <th scope="col">Amount</th>
                         <th scope="col">Created</th>
                         <th scope="col">Last Updated</th>
                         <th scope="col">Status</th>
@@ -27,7 +27,7 @@
                     <tr>
                         <td>
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
                                 <label class="custom-control-label" for="customCheck1">1</label>
                             </div>
                         </td>
@@ -118,7 +118,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -146,7 +146,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -174,7 +174,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -202,7 +202,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -229,7 +229,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -256,7 +256,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -284,7 +284,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -312,7 +312,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
@@ -340,7 +340,7 @@
                         <td>E-electronic</td>
                         <td>$20.8</td>
                         <td>18 Jan, 2022</td>
-                        <td>$14 Jan, 2022</td>
+                        <td>14 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">

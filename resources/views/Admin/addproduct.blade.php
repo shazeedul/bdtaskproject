@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group row  ">
                     <label for="colFormLabel" class="col-sm-2 font-weight-bold col-form-label">
-                        <h5>Product Code <sup>*</s> </h5>
+                        <h5>Product Code <sup>*</sup> </h5>
                     </label>
                     <div class="col-sm-10">
                         <input type="text" class="col-lg-8 form-control" id="colFormLabel" placeholder="Product code">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group row ">
                     <label for="productname" class="col-sm-2 font-weight-bold col-form-label">
-                        <h5>Product Name <sup>*</s> </h5>
+                        <h5>Product Name <sup>*</sup> </h5>
                     </label>
                     <div class="col-sm-10">
                         <input type="text" class="col-lg-8 form-control" id="productname" placeholder="Product Name">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group row ">
                     <label for="catagoryname" class="col-sm-2 font-weight-bold col-form-label">
-                        <h5> Catagory Name <sup>*</s> </h5>
+                        <h5> Catagory Name <sup>*</sup> </h5>
                     </label>
                     <div class="col-sm-10">
                         <select class="col-lg-8 form-control" id="catagoryname">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group row ">
                     <label for="brandname" class="col-sm-2 font-weight-bold col-form-label">
-                        <h5> Brand Name <sup>*</s> </h5>
+                        <h5> Brand Name <sup>*</sup> </h5>
                     </label>
                     <div class="col-sm-10">
                         <select class="col-lg-8 form-control" id="brandname">
@@ -59,7 +59,7 @@
 
                 <div class="form-group row ">
                     <label for="modelname" class="col-sm-2 font-weight-bold col-form-label">
-                        <h5> Model Name <sup>*</s> </h5>
+                        <h5> Model Name <sup>*</sup> </h5>
                     </label>
                     <div class="col-sm-10">
                         <select class="col-lg-8 form-control" id="modelname">
@@ -73,8 +73,17 @@
                 </div>
 
                 <div class="form-group row ">
+                    <label for="price" class="col-sm-2 font-weight-bold col-form-label">
+                        <h5>Price <sup>*</sup> </h5>
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="col-lg-8 form-control" id="price" placeholder="Price">
+                    </div>
+                </div>
+
+                <div class="form-group row ">
                     <label for="um" class="col-sm-2 font-weight-bold col-form-label">
-                        <h5>U/M <sup>*</s> </h5>
+                        <h5>U/M <sup>*</sup> </h5>
                     </label>
                     <div class="col-sm-10">
                         <select class="col-lg-8 form-control" id="um">
