@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -30,18 +30,18 @@ class AuthController extends Controller
         ]);
         $email = $request -> input('email');
         $password = $request -> input('password');
-        $users = DB::table('users')
+        $admin = DB::table('admin')
                 ->select('*')
                 ->where('email', $email)
                 ->where('status', 1)
                 ->first();
 
-                if($users){
-                    if(Hash::check($password, $users->password)){
+                if($admin){
+                    if(Hash::check($password, $admin->password)){
                         $data = array(
                             'email' => $email,
-                            'f_name' => $users->f_name,
-                            'l_name' => $users->l_name,
+                            'f_name' => $admin->f_name,
+                            'l_name' => $admin->l_name,
                             'is_login' => 1,
                             'is_admin' => 1
                         );

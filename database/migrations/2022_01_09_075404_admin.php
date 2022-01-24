@@ -14,7 +14,7 @@ class Admin extends Migration
     public function up()
     {
         //
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('admin', function (Blueprint $table) {
             $table->id();
             $table->string('f_name' , 20);
             $table->string('l_name' , 20);

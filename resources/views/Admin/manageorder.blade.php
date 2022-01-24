@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'New Order')
+@section('title', 'Manage Order')
 @section('content')
 
 <div class="container-fluid">
@@ -363,8 +363,5 @@
         </div>
     </div>
 </div>
-
-
-
 
 @endsection('content')

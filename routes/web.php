@@ -21,5 +21,5 @@ Route::get('/admin', 'App\Http\Controllers\Admin\AuthController@index')->name('a
 Route::post('/admin', 'App\Http\Controllers\Admin\AuthController@postLogin')->name('adminlogin');
 
 
-Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard')->middleware('preventlogin');
 

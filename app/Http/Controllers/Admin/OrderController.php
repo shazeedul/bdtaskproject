@@ -8,9 +8,12 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     //
-    public function index(){
-        // echo "new order";
-        // die();
+    public function neworder(){
+        
         return view('Admin/neworder');
+    }
+    public function manageorder(){
+        
+        return view('Admin/manageorder');
     }
 }
