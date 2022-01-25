@@ -5,15 +5,19 @@
 <div class="container-fluid">
     <div class="content-wrapper">
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
-            <h1>Product order List</h1>
+            <h1>Manage order List</h1>
             <div class="row d-flex justify-content-between p-2 ">
                 <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
                 
             </div>
+            <div class="row ">
+                <a href="{{route('neworder')}}"><button class="btn btn-success mb-4"><i
+                            class="fas fa-list-ul"></i> New Order</button></a>
+            </div>
             <table class="table table-white   table-hover">
                 <thead class="">
                     <tr>
-                        <th scope="col">Orders #</th>
+                        <th scope="col">Orders ID</th>
                         <th scope="col">Product Name</th>
                         <th scope="col">Total</th>
                         <th scope="col">Created</th>
@@ -27,12 +31,12 @@
                     <tr>
                         <td>
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
                                 <label class="custom-control-label" for="customCheck1">1</label>
                             </div>
                         </td>
                         <td>Fashion</td>
-                        <td>$30.8</td>
+                        <td>&#2547;30.8</td>
                         <td>18 Jan, 2022</td>
                         <td>Yesterday</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
@@ -60,7 +64,7 @@
                             </div>
                         </td>
                         <td>Gadget</td>
-                        <td>$100.8</td>
+                        <td>&#2547;100.8</td>
                         <td>18 Jan, 2022</td>
                         <td>16 Jan, 2022</td>
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>

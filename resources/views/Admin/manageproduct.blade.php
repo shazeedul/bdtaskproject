@@ -25,8 +25,7 @@
                         <th scope="col">Catagory</th>
                         <th scope="col">Model</th>
                         <th scope="col">Pur Price</th>
-                        <th scope="col">Min Price</th>
-                        <th scope="col">Retl Price</th>
+                        <th scope="col">Offer Price</th>
                         <th scope="col">BL Price</th>
                         <th scope="col">Status</th>
                         <th scope="col">action</th>
@@ -40,14 +39,13 @@
                     <tr>
                         <td>
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
                                 <label class="custom-control-label" for="customCheck1">1</label>
                             </div>
                         </td>
                         <td>Tv-Symphony-Galaxy j7</td>
                         <td> Tv </td>
                         <td> Galaxy j7 </td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
@@ -83,7 +81,6 @@
                         <td> <input type="number" class="col-lg-5"> </td>
                         <td> <input type="number" class="col-lg-5"> </td>
                         <td> <input type="number" class="col-lg-5"> </td>
-                        <td> <input type="number" class="col-lg-5"> </td>
                         <td>Inactive</td>
                         <td>
                             <div class="dropdown align-right">
@@ -111,11 +108,8 @@
                             </div>
                         </td>
                         <td>Tv-Samsung-65UH8500</td>
-                        <td>
-                            Tv
-                        </td>
+                        <td>Tv</td>
                         <td> 65UH8500</td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
@@ -151,7 +145,6 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td>Inactive</td>
                         <td>
                             <div class="dropdown align-right">
@@ -182,7 +175,6 @@
                         <td>Tv-Samsung-65UH8500</td>
                         <td> Tv </td>
                         <td> 65UH8500</td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
@@ -220,7 +212,6 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td>Inactive</td>
                         <td>
                             <div class="dropdown align-right">
@@ -250,7 +241,6 @@
                         <td>Shoes-Walton-55UH7700</td>
                         <td> Shoes </td>
                         <td> 55UH7700</td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
@@ -286,7 +276,6 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td>Inactive</td>
                         <td>
                             <div class="dropdown align-right">
@@ -319,7 +308,6 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td>Inactive</td>
                         <td>
                             <div class="dropdown align-right">
@@ -349,7 +337,6 @@
                         <td>Laptop-Apple-2021</td>
                         <td> laptop</td>
                         <td> Galaxy j7</td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
@@ -387,7 +374,6 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td>Inactive</td>
                         <td>
                             <div class="dropdown align-right">
@@ -417,7 +403,6 @@
                         <td>Tv</td>
                         <td> TV </td>
                         <td> 2021</td>
-                        <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
