@@ -51,7 +51,10 @@ class AuthController extends Controller
                         
                         // print_r($request->session()->get('admin'));
                         // die();
-                        return redirect('dashboard');
+                        
+                        return redirect('dashboard')->with('status', 'Welcome Back- '.$admin->f_name." ".$admin->l_name);
+
+                        // return redirect('dashboard');
 
                         // echo "Password match";
 

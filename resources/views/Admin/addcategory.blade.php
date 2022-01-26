@@ -3,8 +3,9 @@
 @section('content')
 
 
-<div class="container-fluid">
-    <div class="content-wrapper">
+
+
+    <div class="container-fluid">
         <div class="row pt-2 pl-5 pb-2 ">
             <h1>Add Catagory</h1>
         </div>
@@ -42,8 +43,9 @@
                 <button type="submit" class="btn btn-success">Save</button>
             </div>
         </div>
-
     </div>
-</div>
 
-@endsection('content')
+
+
+
+@endsection

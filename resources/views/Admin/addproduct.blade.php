@@ -2,8 +2,7 @@
 @section('title', 'Add Product')
 @section('content')
 
-<div class="container-fluid">
-    <div class="content-wrapper">
+    <div class="container-fluid">
         <div class="row pt-2 pl-5 pb-2 bg-white">
             <h1>Add Product</h1>
         </div>
@@ -144,6 +143,5 @@
 
 
     </div>
-</div>
 
-@endsection('content')
+@endsection

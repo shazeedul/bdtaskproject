@@ -2,10 +2,7 @@
 @section('title', 'Manage Category')
 @section('content')
 
-
-
-<div class="container-fluid">
-    <div class="content-wrapper">
+    <div class="container-fluid">
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
             <h1>Manage Catagory</h1>
             <div class="row d-flex justify-content-between p-2 ">
@@ -234,9 +231,9 @@
             </table>
         </div>
     </div>
-</div>
 
 
 
 
-@endsection('content')
+
+@endsection

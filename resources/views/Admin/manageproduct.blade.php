@@ -3,8 +3,7 @@
 @section('content')
 
 
-<div class="container-fluid">
-    <div class="content-wrapper">
+    <div class="container-fluid">
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
             <h1>Manage Product</h1>
 
@@ -428,7 +427,7 @@
             </table>
         </div>
     </div>
-</div>
+
 
 
 @endsection('content')

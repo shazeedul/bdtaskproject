@@ -3,8 +3,7 @@
 @section('content')
 
 <div class="container-fluid">
-    <div class="content-wrapper">
-        <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
+    <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
             <h1>Manage order List</h1>
             <div class="row d-flex justify-content-between p-2 ">
                 <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
@@ -364,8 +363,8 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
     </div>
 </div>
 
-@endsection('content')
+
+@endsection

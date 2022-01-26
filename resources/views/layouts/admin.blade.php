@@ -54,26 +54,6 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -81,8 +61,8 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="btn btn-primary" href="{{route('logout')}}" role="button">Logout
-          <i class="fas fa-sign-out-alt"></i>
+        <a class="btn btn-primary" href="{{route('logout')}}" role="button">
+          <i class="fas fa-sign-out-alt fa-lg"></i>
         </a>
           
         
@@ -239,8 +219,24 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
-  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                </div>             
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
   @yield('content')
   <!-- /.content-wrapper -->
   <footer class="main-footer">
