@@ -7,8 +7,6 @@
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
             <h1>Manage Product</h1>
 
-            <a href="{{route('addproduct')}}"><button class="btn bg-info mb-4 mt-4">Add Product</button></a>
-
             <div class="row d-flex justify-content-between">
 
                 <input class="form-control col-lg-4 mb-2" id="myInput" type="text" placeholder="Search..">
@@ -23,9 +21,10 @@
                         <th scope="col">Product Name</th>
                         <th scope="col">Catagory</th>
                         <th scope="col">Model</th>
-                        <th scope="col">Pur Price</th>
-                        <th scope="col">Offer Price</th>
-                        <th scope="col">BL Price</th>
+                        <th scope="col">Buying Price</th>
+                        <th scope="col">MRP Price</th>
+                        <th scope="col">Selling Price</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Status</th>
                         <th scope="col">action</th>
 
@@ -48,21 +47,26 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
+                        
 
 
 
@@ -80,20 +84,24 @@
                         <td> <input type="number" class="col-lg-5"> </td>
                         <td> <input type="number" class="col-lg-5"> </td>
                         <td> <input type="number" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -112,20 +120,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -144,20 +156,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -177,20 +193,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -211,20 +231,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -243,20 +267,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -275,20 +303,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -307,20 +339,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -339,20 +375,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -373,20 +413,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -405,20 +449,24 @@
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
                         <td> <input type="text" class="col-lg-5"> </td>
+                        <td> <img class="col-lg-5" src="dist/img/prod-1.jpg" alt=""> </td>
                         <td>Inactive</td>
-                        <td>
-                            <div class="dropdown align-right">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Edit
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Active</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
-
-                                </div>
-                            </div>
+                        <td class="project-actions text-right">
+                            <a class="btn btn-primary btn-sm" href="#">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                            </a>
+                            <a class="btn btn-info btn-sm" href="#">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
 
 
@@ -430,4 +478,4 @@
 
 
 
-@endsection('content')
+@endsection

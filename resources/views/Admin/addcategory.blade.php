@@ -11,10 +11,7 @@
         </div>
         <div class=" m-4 border p-3">
 
-            <div class="row ">
-                <a href="{{route('managecategory')}}"><button class="btn btn-success mb-4"><i
-                            class="fas fa-list-ul"></i> Manage Category</button></a>
-            </div>
+            
             <div class="form-group row  ">
                 <label for="colFormLabel" class="col-sm-2 font-weight-bold col-form-label">
                     <h5>Catagory Name </h5>

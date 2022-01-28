@@ -7,7 +7,6 @@
             <h1>Manage Catagory</h1>
             <div class="row d-flex justify-content-between p-2 ">
                 <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
-                <a href="{{route('addcategory')}}"><button class="btn bg-info"><i class="fas fa-plus-circle"></i> Add catagory</button></a>
             </div>
             <table class="table table-white   table-hover">
                 <thead class="">

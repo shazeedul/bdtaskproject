@@ -9,10 +9,7 @@
                 <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
                 
             </div>
-            <div class="row ">
-                <a href="{{route('neworder')}}"><button class="btn btn-success mb-4"><i
-                            class="fas fa-list-ul"></i> New Order</button></a>
-            </div>
+            
             <table class="table table-white   table-hover">
                 <thead class="">
                     <tr>
