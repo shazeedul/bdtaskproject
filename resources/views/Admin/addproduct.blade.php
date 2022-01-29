@@ -172,6 +172,7 @@
         $(function () {
           // Summernote
           $('#summernote').summernote()
+          
       
           
         })
