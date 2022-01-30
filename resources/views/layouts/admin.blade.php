@@ -170,12 +170,12 @@
                   <p>Add Category</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="{{route('managecategory')}}" class="nav-link {{request()->is('managecategory')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Manage Category</p>
                 </a>
-              </li>
+              </li> --}}
             </ul>
           </li>
           <li class="nav-item">
@@ -228,7 +228,8 @@
             </div>
         </div><!-- /.container-fluid -->
     </div>
-  @yield('content')
+    @yield('content')
+  </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 Bdtaskproject.</strong>
@@ -240,8 +241,7 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+
 
 
     <!-- jQuery -->

@@ -5,17 +5,9 @@
 
     <div class="container-fluid">
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
-            <h1>Manage Product</h1>
-
-            <div class="row d-flex justify-content-between">
-
-                <input class="form-control col-lg-4 mb-2" id="myInput" type="text" placeholder="Search..">
-
-                <button class="btn bg-success mb-2">Save</button>
-
-            </div>
-            <table class="table table-white   table-hover">
-                <thead class="">
+            <h1>Manage Product List</h1>
+            <table id="example1" class="table table-bordered table-hover ">
+                <thead>
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Product Name</th>
@@ -27,10 +19,6 @@
                         <th scope="col">Image</th>
                         <th scope="col">Status</th>
                         <th scope="col">action</th>
-
-
-
-
                     </tr>
                 </thead>
                 <tbody>
@@ -66,10 +54,6 @@
                                 Delete
                             </a>
                         </td>
-                        
-
-
-
                     </tr>
                     <tr>
                         <td>
@@ -103,9 +87,6 @@
                                 Delete
                             </a>
                         </td>
-
-
-
                     </tr>
                     <tr>
                         <td>

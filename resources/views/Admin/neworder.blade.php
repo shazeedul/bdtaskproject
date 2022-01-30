@@ -64,12 +64,9 @@
         </div>    
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
             <h1>New order List</h1>
-            <div class="row d-flex justify-content-between p-2 ">
-                <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
-            </div>
             
-            <table class="table table-white   table-hover">
-                <thead class="">
+            <table id="example1" class="table table-bordered table-hover ">
+                <thead>
                     <tr>
                         <th scope="col">Orders ID</th>
                         <th scope="col">User Name</th>
@@ -80,7 +77,6 @@
                         <th scope="col" class="text-center">Address</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -105,7 +101,6 @@
                                 </a>
                             </div>
                         </td>
-
                     </tr>
                     <tr>
                         <td>
@@ -128,7 +123,6 @@
                                 </a>
                             </div>
                         </td>
-
                     </tr>
                     <tr>
                         <td>
@@ -151,7 +145,6 @@
                                 </a>
                             </div>
                         </td>
-
                     </tr>
                     <tr>
                         <td>
@@ -174,7 +167,6 @@
                                 </a>
                             </div>
                         </td>
-
                     </tr>
                     <tr>
                         <td>
@@ -361,10 +353,5 @@
                 </tbody>
             </table>
         </div>
-    
 </div>
-
-
-
-
 @endsection

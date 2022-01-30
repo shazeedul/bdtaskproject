@@ -1,9 +1,22 @@
 $(function () {
     // Summernote
-    $('#summernote').summernote()
+    $('#summernote1').summernote({
+      height: 250,   
+      theme: 'monokai'
+    });
 
     
   });
+$(function () {
+    // Summernote
+    $('#summernote2').summernote({
+      height: 150,   
+      theme: 'monokai'
+    });
+
+    
+  });
+
 
 
 

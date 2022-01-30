@@ -4,11 +4,8 @@
 
     <div class="container-fluid">
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
-            <h1>Manage Catagory</h1>
-            <div class="row d-flex justify-content-between p-2 ">
-                <input class="form-control col-lg-4" id="myInput" type="text" placeholder="Search..">
-            </div>
-            <table class="table table-white   table-hover">
+            <h1>Manage Catagory List</h1>
+            <table id="example1" class="table table-bordered table-hover ">
                 <thead class="">
                     <tr>
                         <th scope="col">ID</th>
@@ -230,8 +227,6 @@
             </table>
         </div>
     </div>
-
-
 
 
 
