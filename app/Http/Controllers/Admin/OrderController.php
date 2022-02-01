@@ -16,4 +16,8 @@ class OrderController extends Controller
         
         return view('Admin/manageorder');
     }
+    public function invoice(){
+        
+        return view('Admin/invoice');
+    }
 }

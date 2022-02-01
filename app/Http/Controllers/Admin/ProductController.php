@@ -8,9 +8,13 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
-    public function addproduct(){
+    public function index(){
         
         return view('Admin/addproduct');
+    }
+    public function addProduct(Request $request){
+        
+        
     }
     public function manageproduct(){
         

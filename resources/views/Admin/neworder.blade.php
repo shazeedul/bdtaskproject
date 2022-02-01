@@ -4,64 +4,7 @@
 
 <div class="container-fluid">
           
-        <!-- Modal -->
-        <div class="modal fade" id="newOrderAction" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    
-                    <div class="form-group row ">
-                        <label for="productname" class="col-sm-2 font-weight-bold col-form-label">
-                            <h5>Product Name </h5>
-                        </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="col-lg-8 form-control" id="productname" placeholder="Product Name">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label for="price" class="col-sm-2 font-weight-bold col-form-label">
-                            <h5>Price</h5>
-                        </label>
-                        <div class="col-sm-10">
-                            <input type="number" min="0" class="col-lg-8 form-control" id="price" placeholder="Price">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label for="quantity" class="col-sm-2 font-weight-bold col-form-label">
-                            <h5>Quantity</h5>
-                        </label>
-                        <div class="col-sm-10">
-                            <input type="number" min="0" class="col-lg-8 form-control" id="quantity" placeholder="quantity">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label for="Status" class="col-sm-2 font-weight-bold col-form-label">
-                            <h5>Status</h5>
-                        </label>
-                        <div class="col-sm-10">
-                            <select class="col-lg-8 form-control" id="Status">
-                                <option value="" disabled selected hidden>Choose Status...</option>
-                                <option>Received</option>
-                                <option>Pending</option>
-                                <option>Delivered</option>
-                            </select>
-                        </div>
-                    </div>
-                       
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-            </div>
-        </div>    
+            
         <div class="col-lg-12 table-border border-light bg_table shadow-sm p-3 ">
             <h1>New order List</h1>
             
@@ -95,7 +38,7 @@
                         <td> <span class="bg-warning p-1 rounded">pending...</span> </td>
                         <td>
                             <div class="dropdown align-right">
-                                <a href="#"><button class="btn btn-danger" type="button" id="eyeButton" data-toggle="modal" data-target="#newOrderAction">
+                                <a href="{{route('invoice')}}"><button class="btn btn-danger" type="button" id="eyeButton">
                                     <i class="fas fa-eye"></i>
                                 </button>
                                 </a>

@@ -3,13 +3,15 @@
 @section('content')
 
     <div class="container-fluid">
-        <div class="row pt-2 pl-5 pb-2 bg-white">
-            <h1>Add Product</h1>
-        </div>
+        
         <div class="row">
             <div class="d-flex justify-content-center m-4">
-                <div class="p-5 col-lg-10 align-text-bottom bg_product shadow">
-                    <form>
+                <div class="card p-5 col-lg-10 align-text-bottom bg_product shadow">
+                    <div class="card-header">
+                        <h3>Add Product</h3>
+                    </div>
+                    <form method="POST" enctype="multipart/form-data" name="addproduct">
+                        @csrf
                         <div class="form-group row">
                             <div class="col-md-6 mb-3">
                                 <label for="productid" class="col-sm-6 font-weight-bold col-form-label">
@@ -69,24 +71,24 @@
                         </div>
                         <div class="form-group row">
                             <div class="col">
-                                <label for="buyingprice" class="col-sm-2 font-weight-bold col-form-label">
-                                    <h5>Buying Price <sup>*</sup> </h5>
+                                <label for="buyingprice" class="col-sm-6 font-weight-bold col-form-label">
+                                    <h5>Buying Price </h5>
                                 </label>
                                 <div class="col-sm-12">
                                     <input type="text" class="col-lg-8 form-control" id="buyingprice" placeholder="Buying Price">
                                 </div>
                             </div>
                             <div class="col">
-                                <label for="mrpprice" class="col-sm-2 font-weight-bold col-form-label">
-                                    <h5>MRP Price <sup>*</sup> </h5>
+                                <label for="mrpprice" class="col-sm-6 font-weight-bold col-form-label">
+                                    <h5>MRP Price </h5>
                                 </label>
                                 <div class="col-sm-12">
                                     <input type="text" class="col-lg-8 form-control" id="mrpprice" placeholder="MRP Price">
                                 </div>
                             </div>
                             <div class="col">
-                                <label for="sellingprice" class="col-sm-2 font-weight-bold col-form-label">
-                                    <h5>Selling Price <sup>*</sup> </h5>
+                                <label for="sellingprice" class="col-sm-6 font-weight-bold col-form-label">
+                                    <h5>Selling Price </h5>
                                 </label>
                                 <div class="col-sm-12">
                                     <input type="text" class="col-lg-8 form-control" id="sellingprice" placeholder="Selling Price">
