@@ -82,7 +82,7 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery -->
+{{-- <!-- jQuery -->
 <script src="{{asset('public/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -90,8 +90,11 @@
 <script src="{{asset('plugins/jquery-validation/jquery.validate.min.js')}}"></script>
 <script src="{{asset('plugins/jquery-validation/additional-methods.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('dist/js/adminlte.min.js')}}"></script> --}}
 <!-- Page specific script -->
 <script src="{{asset('dist/js/AuthLogin/login.js')}}"></script>
+
+<!-- Login JS -->
+<script src="{{asset('dist/js/Authlogin/custom.js')}}"></script>
 </body>
 </html>
