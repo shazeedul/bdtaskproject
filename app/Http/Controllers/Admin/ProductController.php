@@ -60,9 +60,10 @@ class ProductController extends Controller
         
         $data['product'] = DB::table('product_tb')
                                 ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
-                                ->select('product_tb.*', 'category_tb.id', 'category_tb.c_name')
+                                ->select('product_tb.*', 'category_tb.c_name')
                                 ->orderBy('product_tb.p_category','ASC')
                                 ->get();
+                               
 
         return view('Admin/manageproduct', $data);
     }

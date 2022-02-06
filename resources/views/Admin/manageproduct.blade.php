@@ -21,9 +21,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php $i=1;
+                    @endphp
                     @foreach ($product as $value)
                         <tr>
-                            <td>#{{ $value->id }}</td>
+                            <td>#{{ $i++}}</td>
                             <td>{{ $value->p_name }}</td>
                             <td>{{ $value->c_name }}</td>
                             <td>{{ $value->b_price }}</td>
