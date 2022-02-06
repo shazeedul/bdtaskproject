@@ -10,61 +10,26 @@
                     <div class="card-header">
                         <h3>Add Product</h3>
                     </div>
-                    <form method="POST" enctype="multipart/form-data" name="addproduct">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('addproduct')}}">
                         @csrf
                         <div class="form-group row">
                             <div class="col-md-6 mb-3">
-                                <label for="productid" class="col-sm-6 font-weight-bold col-form-label">
-                                    <h5>Product Id </h5>
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="col-lg-10 form-control" id="productid" placeholder="Product code">
-                                </div>
-                                <label for="catagoryname" class="col-sm-6 font-weight-bold col-form-label">
-                                    <h5> Catagory Name <sup>*</sup> </h5>
-                                </label>
-                                <div class="col-sm-10">
-                                    <select class="col-lg-8 form-control" id="catagoryname">
-                                        <option value="" disabled selected hidden>Choose Category...</option>
-                                        <option>Dean Propsting</option>
-                                        <option>Jonathan Dann</option>
-                                        <option>Sara Horder</option>
-                                        <option>Cooper Selfe</option>
-                                        <option>Taylah Sulman</option>
-                                    </select>
-                                </div>
-                                <label for="modelname" class="col-sm-6 font-weight-bold col-form-label">
-                                    <h5> Model Name <sup>*</sup> </h5>
-                                </label>
-                                <div class="col-sm-10">
-                                    <select class="col-lg-8 form-control" id="modelname">
-                                        <option value="" disabled selected hidden>Choose Model...</option>
-                                        <option>Galaxy J3</option>
-                                        <option>Samsung S10</option>
-                                        <option>Galaxy J7</option>
-                                        <option>Symphony L4</option>
-                                        <option>Realme</option>
-                                    </select>
-                                </div>
-                              </div>
-                              <div class="col-md-6 mb-3">
                                 <label for="productname" class="col-sm-6 font-weight-bold col-form-label">
                                     <h5>Product Name </h5>
                                 </label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="col-lg-10 form-control" id="productname" placeholder="Product Name">
+                                    <input type="text" required class="col-lg-10 form-control" id="productname" placeholder="Product Name" name="p_name">
                                 </div>
-                                <label for="brandname" class="col-sm-6 font-weight-bold col-form-label">
-                                    <h5> Brand Name <sup>*</sup> </h5>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="catagoryname" class="col-sm-6 font-weight-bold col-form-label">
+                                    <h5> Catagory Name <sup>*</sup> </h5>
                                 </label>
                                 <div class="col-sm-10">
-                                    <select class="col-lg-8 form-control" id="brandname">
-                                        <option value="" disabled selected hidden>Choose Brand...</option>
-                                        <option>Nike</option>
-                                        <option>Samsung</option>
-                                        <option>Walton</option>
-                                        <option>Symphony</option>
-                                        <option>Taylah Sulman</option>
+                                    <select class="col-lg-8 form-control" required id="catagoryname" name="p_category">
+                                        @foreach ($category as $value)
+                                            <option value="{{ $value->id }}">{{ $value->c_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                               </div>
@@ -75,7 +40,7 @@
                                     <h5>Buying Price </h5>
                                 </label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="col-lg-8 form-control" id="buyingprice" placeholder="Buying Price">
+                                    <input type="text" required class="col-lg-8 form-control" id="buyingprice" placeholder="Buying Price" name="b_price">
                                 </div>
                             </div>
                             <div class="col">
@@ -83,7 +48,7 @@
                                     <h5>MRP Price </h5>
                                 </label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="col-lg-8 form-control" id="mrpprice" placeholder="MRP Price">
+                                    <input type="text" required class="col-lg-8 form-control" id="mrpprice" placeholder="MRP Price" name="mrp_price">
                                 </div>
                             </div>
                             <div class="col">
@@ -91,54 +56,47 @@
                                     <h5>Selling Price </h5>
                                 </label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="col-lg-8 form-control" id="sellingprice" placeholder="Selling Price">
+                                    <input type="text" required class="col-lg-8 form-control" id="sellingprice" placeholder="Selling Price" name="s_price">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row ">
-                            <label for="quantity" class="col-sm-2 font-weight-bold col-form-label">
-                                <h5>Quantity</h5>
-                            </label>
-                            <div class="col-sm-4">
-                                <input type="number" min="0" class="col-lg-8 form-control" id="quantity" placeholder="quantity">
-                            </div>
-                        </div>
-                        <div class="form-group row ">
-                            <label for="Offer" class="col-sm-2 font-weight-bold col-form-label">
-                                <h5> Offer <sup>*</sup> </h5>
-                            </label>
-                            <div class="col-sm-4">
-                                <select class="col-lg-8 form-control" id="Offer">
-                                    <option value="" disabled selected hidden>Choose Offer...</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
-                                </select>
+                            <div class="col">
+                                <label for="quantity" class="col-sm-2 font-weight-bold col-form-label">
+                                    <h5>Quantity</h5>
+                                </label>
+                                <div class="col-sm-4">
+                                    <input type="number" required min="0" class="col-lg-8 form-control" id="quantity" placeholder="quantity" name="quantity">
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group row ">
-                                <label for="offerlimit" class="col-sm-2 font-weight-bold col-form-label">
-                                    <h5>Image <sup>*</sup> </h5>
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="file" accept="image/png, image/gif, image/jpeg" class="col-lg-10 form-control" id="image" placeholder="Image">
+                                <div class="col">
+                                    <label for="offerlimit" class="col-sm-4 font-weight-bold col-form-label">
+                                        <h5>Image <sup>*</sup> </h5>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input type="file" required accept="image/png, image/gif, image/jpeg" class="col-lg-10 form-control" id="image" placeholder="Image" name="image">
+                                    </div>
                                 </div>
                             </div>
             
                             <div class="form-group row ">
-                                <label for="productdetails" class="col-sm-2 font-weight-bold col-form-label">
-                                    <h5>Product Details</h5>
-                                </label>
-                                <textarea class="col-lg-7 form-control" id="summernote1">
-                                    Place <em>some</em> <u>text</u> <strong>here</strong>
-                                </textarea>
-                                <label for="productdetails" class="col-sm-2 font-weight-bold col-form-label">
-                                    <h5>Product Details</h5>
-                                </label>
-                                <textarea class="col-lg-7 form-control" id="summernote2">
-                                    Place <em>some</em> <u>text</u> <strong>here</strong>
-                                </textarea>
-                                
+                                <div class="col">
+                                    <label for="productdetails" class="col-sm-2 font-weight-bold col-form-label">
+                                        <h5>Short Product Details</h5>
+                                    </label>
+                                    <textarea required class="col-lg-7 form-control" id="summernote2" name="s_description">
+                                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                                    </textarea>
+                                    <label for="productdetails" class="col-sm-2 font-weight-bold col-form-label">
+                                        <h5>Long Product Details</h5>
+                                    </label>
+                                    <textarea required class="col-lg-7 form-control" id="summernote1" name="l_description">
+                                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                                    </textarea>
+                                </div>
                             </div>
                         </div>
 
@@ -153,7 +111,7 @@
                             </div>
                         </div>
                         
-                      </form>
+                    </form>
                 </div>
             </div>
         </div>

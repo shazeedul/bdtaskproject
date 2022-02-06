@@ -17,11 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/neworder', 'App\Http\Controllers\Admin\OrderController@neworder')->name('neworder');
 Route::get('/manageorder', 'App\Http\Controllers\Admin\OrderController@manageorder')->name('manageorder');
+Route::get('/addorder', 'App\Http\Controllers\Admin\OrderController@addorder')->name('addorder');
+
 Route::get('/invoice', 'App\Http\Controllers\Admin\OrderController@invoice')->name('invoice');
+
 Route::get('/addproduct', 'App\Http\Controllers\Admin\ProductController@index')->name('addproduct');
 Route::post('/addproduct', 'App\Http\Controllers\Admin\ProductController@addProduct')->name('addproduct');
 Route::get('/manageproduct', 'App\Http\Controllers\Admin\ProductController@manageproduct')->name('manageproduct');
-Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addcategory')->name('addcategory');
-Route::get('/managecategory', 'App\Http\Controllers\Admin\CategoryController@managecategory')->name('managecategory');
+
+Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@index')->name('addcategory');
+Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCategory')->name('addcategory');
+
 Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 

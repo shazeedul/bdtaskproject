@@ -12,6 +12,10 @@ class OrderController extends Controller
         
         return view('Admin/neworder');
     }
+    public function addorder(){
+        
+        return view('Admin/addorder');
+    }
     public function manageorder(){
         
         return view('Admin/manageorder');
