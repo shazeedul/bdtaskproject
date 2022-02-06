@@ -77,7 +77,7 @@
                         <td>{{ $value->c_name }}</td>
                         <td>{{ $value->category }}</td>
                         <td>
-                            <button class="btn btn-success" type="submit">Active</button>
+                            <button class="btn btn-success" type="submit" {{ $value->status }}>Active</button>
                             <button class="btn btn-primary" type="submit"><i class="fas fa-pen-alt"></i></button>
                             <button class="btn btn-danger" type="submit"><i
                                     class="fas fa-trash-alt"></i></button>

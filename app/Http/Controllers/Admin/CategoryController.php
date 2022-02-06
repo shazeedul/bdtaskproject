@@ -18,7 +18,7 @@ class CategoryController extends Controller
         
         $c_data['m_category'] =  DB::table('category_tb')
                             ->select('c_name','id','category','status')
-                            ->where('category',0)
+                            // ->where('category',0)
                             ->get();
         
         return view('Admin/addcategory', $data, $c_data);
