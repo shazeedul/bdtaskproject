@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function addProduct(Request $request){
         $validated = $request->validate([
             'p_name'            => 'required|max:50',
-            's_description'     => 'required|max:150',
+            's_description'     => 'required|max:300',
             'l_description'     => 'required|max:500',
             'quantity'          => 'required|max:500',
             'b_price'           => 'required|numeric',
@@ -31,7 +31,9 @@ class ProductController extends Controller
             'image'             => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
         
-        $path = $request->file('image')->store('public/p-image');
+        $image_name = time().$request->file('image')->getClientOriginalName();
+        
+        $path = $request->file('image')->storeAs('public/p-image',$image_name);
 
         $data = array(
             'p_name'            => $request->input('p_name'),
@@ -42,7 +44,7 @@ class ProductController extends Controller
             'mrp_price'         => $request->input('mrp_price'),
             's_price'           => $request->input('s_price'),
             'p_category'        => $request->input('p_category'),
-            'image'             => $path
+            'image'             => $image_name
         );
 
         $insert = DB::table('product_tb')->insert($data);
@@ -59,12 +61,28 @@ class ProductController extends Controller
     public function manageproduct(){
         
         $data['product'] = DB::table('product_tb')
-                                ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
                                 ->select('product_tb.*', 'category_tb.c_name')
+                                ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
                                 ->orderBy('product_tb.p_category','ASC')
                                 ->get();
                                
 
         return view('Admin/manageproduct', $data);
+    }
+
+    public function editproduct($id=null){
+        $data['product'] = $product = DB::table('product_tb')
+                                ->select('product_tb.*', 'category_tb.id as c_id', 'category_tb.c_name')
+                                ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
+                                ->where('product_tb.id', $id)
+                                ->first();
+        
+        $data['category'] = DB::table('category_tb')
+                                ->select('c_name', 'id')
+                                ->where('category', '!=', 0)
+                                ->where('status', 1)
+                                ->where('id', '!=', $product->c_id)
+                                ->get();
+        return view('Admin/editproduct', $data);
     }
 }

@@ -12,8 +12,8 @@ class DashboardController extends Controller
     //
     public function index(){
         $data['product'] = DB::table('product_tb')
+                        ->select('product_tb.*', 'category_tb.c_name')
                         ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
-                        ->select('product_tb.*', 'category_tb.id', 'category_tb.c_name')
                         ->orderBy('product_tb.p_category','ASC')
                         ->get();
 

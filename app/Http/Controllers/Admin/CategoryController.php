@@ -16,12 +16,12 @@ class CategoryController extends Controller
                             ->where('status',1)
                             ->get();
         
-        $c_data['m_category'] =  DB::table('category_tb')
+        $data['m_category'] =  DB::table('category_tb')
                             ->select('c_name','id','category','status')
                             // ->where('category',0)
                             ->get();
         
-        return view('Admin/addcategory', $data, $c_data);
+        return view('Admin/addcategory', $data);
     }
     public function addCategory(Request $request){
         $validated = $request->validate([

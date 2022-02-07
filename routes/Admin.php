@@ -24,6 +24,7 @@ Route::get('/invoice', 'App\Http\Controllers\Admin\OrderController@invoice')->na
 Route::get('/addproduct', 'App\Http\Controllers\Admin\ProductController@index')->name('addproduct');
 Route::post('/addproduct', 'App\Http\Controllers\Admin\ProductController@addProduct')->name('addproduct');
 Route::get('/manageproduct', 'App\Http\Controllers\Admin\ProductController@manageproduct')->name('manageproduct');
+Route::get('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@editproduct')->name('editproduct');
 
 Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@index')->name('addcategory');
 Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCategory')->name('addcategory');
