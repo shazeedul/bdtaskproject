@@ -1,10 +1,6 @@
 @extends('layouts.admin')
 @section('title', 'Manage Order')
 @section('content')
-
-
-
-
     <div class="container-fluid">
         <div class="row pt-2 pl-5 pb-2 ">
             <h1>Add Catagory</h1>
