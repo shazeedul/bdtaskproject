@@ -65,12 +65,15 @@ class AuthController extends Controller
                 }else{
                     return Redirect::back()->withErrors(['error' => 'Wrong Email']);
                 }
-                
+    }
 
-
-
-                
-
+    public function adminProfile(){
+        //
+        return view('Admin/adminprofile');
+    }
+    public function editPrfile(){
+        //
+        return view('Admin/adminprofile');
     }
 }
 

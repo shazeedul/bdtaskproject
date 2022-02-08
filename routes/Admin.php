@@ -31,3 +31,7 @@ Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCa
 
 Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 
+Route::get('/adminprofile', 'App\Http\Controllers\Admin\AuthController@adminProfile')->name('adminprofile');
+Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editPrfile')->name('adminprofile');
+
+

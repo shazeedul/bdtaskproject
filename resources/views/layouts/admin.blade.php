@@ -91,7 +91,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Syed Shazeedul Islam</a>
+          <a href="{{route('adminprofile')}}" class="d-block">Syed Shazeedul Islam</a>
         </div>
       </div>
       <!-- Sidebar Menu -->
@@ -253,7 +253,6 @@
 
 
     <!-- jQuery -->
-
     <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
@@ -282,7 +281,7 @@
     <!-- overlayScrollbars -->
     <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
     <!-- AdminLTE App -->
-    <script src="{{asset('dist/js/adminlte.js')}}"></script>
+    <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 
     <!-- <script src="{{asset('plugins/chart.js/Chart.min.js')}}"></script> -->
     <script src="{{asset('dist/js/pages/dashboard3.js')}}"></script>
