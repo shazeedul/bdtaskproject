@@ -308,28 +308,35 @@
                   <!-- /.tab-pane -->
 
                   <div class="tab-pane" id="settings">
-                    <form class="form-horizontal" method="POST" action="#">
+                    
+                    <form class="form-horizontal" method="POST" action="{{route('adminprofile')}}">
                         @csrf
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">First Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="f_name" id="first_name" placeholder="last name" title="enter your first name if any.">
+                            <input type="text" value="{{ $adminProfile->f_name }}" class="form-control" name="f_name" id="first_name" placeholder="last name" title="enter your first name if any.">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">Last Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="l_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                            <input type="text" value="{{ $adminProfile->l_name }}" class="form-control" name="l_name" id="last_name" placeholder="last name" title="enter your last name if any.">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
+                          <input type="email" value="{{ $adminProfile->email }}" class="form-control" id="inputEmail" placeholder="Email" name="email">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="password" class="col-sm-2 col-form-label">Password</label>
+                        <label for="password" class="col-sm-2 col-form-label">Old Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="#" id="password" placeholder="password" title="enter your password.">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">New Password</label>
                         <div class="col-sm-10">
                             <input type="password" class="form-control" name="#" id="password" placeholder="password" title="enter your password.">
                         </div>
@@ -356,6 +363,7 @@
                         </div>
                       </div>
                     </form>
+                    
                   </div>
                   <!-- /.tab-pane -->
                 </div>

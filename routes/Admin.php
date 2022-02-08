@@ -25,6 +25,7 @@ Route::get('/addproduct', 'App\Http\Controllers\Admin\ProductController@index')-
 Route::post('/addproduct', 'App\Http\Controllers\Admin\ProductController@addProduct')->name('addproduct');
 Route::get('/manageproduct', 'App\Http\Controllers\Admin\ProductController@manageproduct')->name('manageproduct');
 Route::get('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@editproduct')->name('editproduct');
+Route::put('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@updateProduct')->name('editproduct');
 
 Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@index')->name('addcategory');
 Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCategory')->name('addcategory');
@@ -32,6 +33,6 @@ Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCa
 Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 
 Route::get('/adminprofile', 'App\Http\Controllers\Admin\AuthController@adminProfile')->name('adminprofile');
-Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editPrfile')->name('adminprofile');
+Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editProfile')->name('adminprofile');
 
 

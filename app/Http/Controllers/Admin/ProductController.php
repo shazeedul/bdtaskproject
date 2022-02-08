@@ -85,4 +85,50 @@ class ProductController extends Controller
                                 ->get();
         return view('Admin/editproduct', $data);
     }
+
+
+    public function updateProduct($id=null, Request $request){
+        $validated = $request->validate([
+            'p_name'            => 'required|max:50',
+            's_description'     => 'required|max:300',
+            'l_description'     => 'required|max:500',
+            'quantity'          => 'required|max:500',
+            'b_price'           => 'required|numeric',
+            'mrp_price'         => 'required|numeric',
+            's_price'           => 'required|numeric',
+            'p_category'        => 'required|numeric',
+            'image'             => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        ]);
+        if($request->file('image')){
+            $image_name = time().$request->file('image')->getClientOriginalName();
+        
+            $path = $request->file('image')->storeAs('public/p-image',$image_name);
+        }else{
+            $image_name =  $request->input('old_image');
+        }
+        
+
+        $data = array(
+            'p_name'            => $request->input('p_name'),
+            's_description'     => $request->input('s_description'),
+            'l_description'     => $request->input('l_description'),
+            'quantity'          => $request->input('quantity'),
+            'b_price'           => $request->input('b_price'),
+            'mrp_price'         => $request->input('mrp_price'),
+            's_price'           => $request->input('s_price'),
+            'p_category'        => $request->input('p_category'),
+            'image'             => $image_name
+        );
+
+        $update = DB::table('product_tb')->where('id', $id)->update($data);
+
+        if($update){
+            return redirect('editproduct/'.$id)->with('status', 'Update Successfully');
+        }else{
+            return redirect('editproduct/'.$id)->with('error', 'Something Went Wrong');
+        }
+
+
+
+    }
 }

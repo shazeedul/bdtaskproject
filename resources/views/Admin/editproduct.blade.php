@@ -10,7 +10,8 @@
                     <div class="card-header">
                         <h3>Edit Product</h3>
                     </div>
-                    <form method="POST" enctype="multipart/form-data" action="{{route('addproduct')}}">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('editproduct', ['id'=>$product->id])}}">
+                        <input type="hidden" name="_method" value="PUT">
                         @csrf
                         <div class="form-group row">
                             <div class="col-md-6 mb-3">
@@ -79,6 +80,7 @@
                                     </label>
                                     <div class="col-sm-10">
                                         <input type="file" required accept="image/png, image/gif, image/jpeg" class="col-lg-10 form-control" id="image" placeholder="Image" name="image">
+                                        <input type="hidden" name="old_name" value="{{route($product->image)}}">
                                         <img src="{{ asset('storage/p-image/'.$product->image) }}" widh="70" height="70">
                                     </div>
                                 </div>

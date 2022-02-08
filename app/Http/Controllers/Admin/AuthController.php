@@ -69,12 +69,20 @@ class AuthController extends Controller
 
     public function adminProfile(){
         //
-        return view('Admin/adminprofile');
+        $data['adminProfile'] = DB::table('admin')
+                                ->select('admin.*')
+                                ->where('status', 1)
+                                ->first();
+        // echo "<pre>";
+        // print_r($data['adminProfile']);
+        // die();
+        return view('Admin/adminprofile',$data);
     }
-    public function editPrfile(){
-        //
-        return view('Admin/adminprofile');
-    }
+    // public function editProfile(){
+        
+    //     //
+    //     return view('Admin/adminprofile', $data);
+    // }
 }
 
 
