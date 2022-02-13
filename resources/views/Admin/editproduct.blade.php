@@ -79,8 +79,8 @@
                                         <h5>Image <sup>*</sup> </h5>
                                     </label>
                                     <div class="col-sm-10">
-                                        <input type="file" required accept="image/png, image/gif, image/jpeg" class="col-lg-10 form-control" id="image" placeholder="Image" name="image">
-                                        <input type="hidden" name="old_name" value="{{route($product->image)}}">
+                                        <input type="file" accept="image/png, image/gif, image/jpeg" class="col-lg-10 form-control" id="image" placeholder="Image" name="image">
+                                        <input type="hidden" name="old_image" value="{{$product->image}}">
                                         <img src="{{ asset('storage/p-image/'.$product->image) }}" widh="70" height="70">
                                     </div>
                                 </div>

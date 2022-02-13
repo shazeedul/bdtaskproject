@@ -314,7 +314,7 @@
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">First Name</label>
                         <div class="col-sm-10">
-                            <input type="text" value="{{ $adminProfile->f_name }}" class="form-control" name="f_name" id="first_name" placeholder="last name" title="enter your first name if any.">
+                            <input type="text" value="{{ $adminProfile->f_name }}" class="form-control" name="f_name" id="first_name" placeholder="First name" title="enter your first name if any.">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -351,7 +351,7 @@
                         <div class="offset-sm-2 col-sm-10">
                           <div class="checkbox">
                             <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                              <input required type="checkbox"> I agree to the <a href="#">terms and conditions</a>
                             </label>
                           </div>
                         </div>

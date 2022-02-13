@@ -18,8 +18,8 @@ class AdminSeeder extends Seeder
     public function run()
     {
         DB::table('admin')->insert([
-            'f_name' => 'syed',
-            'l_name' => 'shazeedul',
+            'f_name' => 'Syed',
+            'l_name' => 'Shazeedul',
             'email' => 'syedshazeedul'.'@gmail.com',
             'password' => Hash::make('shazeed'),
             'status' => 1,

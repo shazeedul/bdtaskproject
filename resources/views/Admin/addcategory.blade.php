@@ -27,7 +27,6 @@
                                 <option value="{{$value->id}}">{{$value->c_name}}</option>
                             @endforeach
                         </select>
-
                     </div>
                 </div>
                 <div class="form-group row">
@@ -67,11 +66,28 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php $i=1;
+                    @endphp
                     @foreach ($m_category as $value)
                     <tr>
-                        <td>#{{ $value->id }}</td>
-                        <td>{{ $value->c_name }}</td>
-                        <td>{{ $value->category }}</td>
+                        <td>#{{ $i++}}</td>
+                        <td>
+                            
+                            {{$value->c_name}}
+                           
+                        </td>
+                        <td>
+                            @if ($value->category)
+                                @foreach ($m_category as $category_name)
+                                    @if ($category_name->id==$value->category)
+                                        {{ $category_name->c_name}}
+                                    @endif
+                                @endforeach
+                            @else
+                                Parent Category
+                            @endif
+                            
+                        </td>
                         <td>
                             <button class="btn btn-success" type="submit" {{ $value->status }}>Active</button>
                             <button class="btn btn-primary" type="submit"><i class="fas fa-pen-alt"></i></button>

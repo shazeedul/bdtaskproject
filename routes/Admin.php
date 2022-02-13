@@ -35,4 +35,5 @@ Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->n
 Route::get('/adminprofile', 'App\Http\Controllers\Admin\AuthController@adminProfile')->name('adminprofile');
 Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editProfile')->name('adminprofile');
 
+Route::get('/users', 'App\Http\Controllers\Admin\UsersController@index')->name('users');
 

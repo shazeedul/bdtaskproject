@@ -47,16 +47,11 @@ class AuthController extends Controller
                         );
 
                         $request->session()->put('admin', (object)$data);
-                        // echo "<pre>";
                         
-                        // print_r($request->session()->get('admin'));
-                        // die();
                         
                         return redirect('dashboard')->with('status', 'Welcome Back- '.$admin->f_name." ".$admin->l_name);
 
-                        // return redirect('dashboard');
-
-                        // echo "Password match";
+                     
 
                     }else{
                         return Redirect::back()->withErrors(['error' => 'Wrong Password']);
@@ -73,9 +68,7 @@ class AuthController extends Controller
                                 ->select('admin.*')
                                 ->where('status', 1)
                                 ->first();
-        // echo "<pre>";
-        // print_r($data['adminProfile']);
-        // die();
+        
         return view('Admin/adminprofile',$data);
     }
     // public function editProfile(){

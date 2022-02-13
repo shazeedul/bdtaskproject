@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
@@ -12,12 +13,13 @@ class CategoryController extends Controller
     public function index(){
         $data['category'] =  DB::table('category_tb')
                             ->select('c_name','id')
-                            ->where('category',0)
+                            ->where('category', 0)
                             ->where('status',1)
                             ->get();
         
-        $data['m_category'] =  DB::table('category_tb')
+        $data['m_category'] = DB::table('category_tb')
                             ->select('c_name','id','category','status')
+                            ->where('status', 1)
                             ->get();
         
         return view('Admin/addcategory', $data);

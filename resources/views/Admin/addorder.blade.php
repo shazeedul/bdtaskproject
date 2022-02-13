@@ -8,14 +8,11 @@
         <div class="card-header card-title">
             <h3>Add Order</h3>
         </div>
-        <form class="p-2">
+        <form class="card p-2">
+            @csrf
             <div class="d-flex justify-content-between">
                 <div class="order_l_hand col-lg-6">
-                    <div class="form-group">
-                        <label for="I_d">ID</label>
-                        <input type="text" class="form-control" id="I_d" placeholder="Order ID" required>
-
-                    </div>
+                    
                     <div class="form-group">
                         <label for="username">UserName</label>
                         <input type="text" class="form-control" id="username" placeholder="Username" required>
@@ -39,8 +36,8 @@
                         <input type="text" class="form-control" id="phone" required>
                     </div>
                     <div class="form-group ">
-                        <label for="Buying">SKU</label>
-                        <input type="number" class="form-control" id="Buying" required>
+                        <label for="Buying">Email Address</label>
+                        <input type="email" class="form-control" id="Buying" required>
                     </div>
                     <div class="form-group ">
                         <label for="mrp">Qty</label>
@@ -54,14 +51,10 @@
                         <label for="status">Status</label>
                         <select class="form-control" id="status" required>
                             <option>Pending Payment</option>
-                            <option>proccessing</option>
-                            <option>Completed</option>
-                            <option>On Hold</option>
-                            <option>Refunded</option>
-                            <option>Failed</option>
+                            
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-dark mx-auto btn-submit">Create</button>
                 </div>
             </div>
 

@@ -89,7 +89,7 @@ class ProductController extends Controller
 
     public function updateProduct($id=null, Request $request){
         $validated = $request->validate([
-            'p_name'            => 'required|max:50',
+            'p_name'            => 'required|max:250',
             's_description'     => 'required|max:300',
             'l_description'     => 'required|max:500',
             'quantity'          => 'required|max:500',
@@ -101,10 +101,9 @@ class ProductController extends Controller
         ]);
         if($request->file('image')){
             $image_name = time().$request->file('image')->getClientOriginalName();
-        
             $path = $request->file('image')->storeAs('public/p-image',$image_name);
         }else{
-            $image_name =  $request->input('old_image');
+            $image_name = $request->input('old_image');
         }
         
 
@@ -119,6 +118,8 @@ class ProductController extends Controller
             'p_category'        => $request->input('p_category'),
             'image'             => $image_name
         );
+        
+
 
         $update = DB::table('product_tb')->where('id', $id)->update($data);
 
