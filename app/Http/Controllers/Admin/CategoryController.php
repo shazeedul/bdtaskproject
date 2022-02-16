@@ -45,7 +45,47 @@ class CategoryController extends Controller
             return redirect('addcategory')->with('status','Something wrong');
         }
     }
-    public function manageCategory(){
-        //
+
+    public function editCategory($id=null){
+        $data['e_category']  = DB::table('category_tb')
+                            ->select('c_name','id','category','status')
+                            ->where('status', 1)
+                            ->where('category_tb.id', $id)
+                            ->first();
+        
+        $data['m_category'] = DB::table('category_tb')
+                            ->select('c_name','id','category','status')
+                            ->where('status', 1)
+                            ->get();
+        return view('Admin/editcategory', $data);
+    }
+
+    public function updateCategory($id=null, Request $request){
+        $validated = $request->validate([
+            'c_name' => 'required|max:255',
+            'category' => 'required|numeric',
+            'status' => 'required|numeric',
+        ]);
+        
+        
+
+        $data = array(
+            'c_name' => $request ->input('c_name'),
+            'category' => $request ->input('category'),
+            'status' => $request ->input('status'),
+        );
+        
+
+
+        $update = DB::table('category_tb')->where('id', $id)->update($data);
+
+        if($update){
+            return redirect('editcategory/'.$id)->with('status', 'Update Successfully');
+        }else{
+            return redirect('editcategory/'.$id)->with('error', 'Something Went Wrong');
+        }
+
+
+
     }
 }

@@ -29,6 +29,7 @@ Route::put('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@up
 
 Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@index')->name('addcategory');
 Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCategory')->name('addcategory');
+Route::get('/editcategory/{id}', 'App\Http\Controllers\Admin\CategoryController@editCategory')->name('editcategory');
 
 Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 

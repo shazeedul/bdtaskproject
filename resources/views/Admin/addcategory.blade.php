@@ -71,11 +71,7 @@
                     @foreach ($m_category as $value)
                     <tr>
                         <td>#{{ $i++}}</td>
-                        <td>
-                            
-                            {{$value->c_name}}
-                           
-                        </td>
+                        <td>{{$value->c_name}}</td>
                         <td>
                             @if ($value->category)
                                 @foreach ($m_category as $category_name)
@@ -86,16 +82,12 @@
                             @else
                                 Parent Category
                             @endif
-                            
                         </td>
                         <td>
                             <button class="btn btn-success" type="submit" {{ $value->status }}>Active</button>
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-pen-alt"></i></button>
-                            <button class="btn btn-danger" type="submit"><i
-                                    class="fas fa-trash-alt"></i></button>
+                            <a class="btn btn-primary" href="{{route('editcategory', ['id'=>$value->id])}}"><i class="fas fa-pen-alt"></a></i>
+                            <button class="btn btn-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
                         </td>
-
-
                     </tr>
                     @endforeach
                 </tbody>
