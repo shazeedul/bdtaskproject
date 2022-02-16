@@ -113,7 +113,7 @@
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
-                            <div class="header__top__right__language">
+                            {{-- <div class="header__top__right__language">
                                 <img src="{asset('/ecommerce/img/language.png')}}" alt="">
                                 <div>English</div>
                                 <span class="arrow_carrot-down"></span>
@@ -121,7 +121,7 @@
                                     <li><a href="#">Spanis</a></li>
                                     <li><a href="#">English</a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                             <div class="header__top__right__auth">
                                 <a href="#"><i class="fa fa-user"></i> Login</a>
                             </div>
@@ -145,10 +145,10 @@
                             <li><a href="{{route('shop')}}">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="{{route('shopdetails')}}">Shop Details</a></li>
+                                    {{-- <li><a href="{{route('shopdetails')}}">Shop Details</a></li> --}}
                                     <li><a href="{{route('shoppingcart')}}">Shoping Cart</a></li>
                                     <li><a href="{{route('checkout')}}">Check Out</a></li>
-                                    <li><a href="{{route('blogdetails')}}">Blog Details</a></li>
+                                    {{-- <li><a href="{{route('blogdetails')}}">Blog Details</a></li> --}}
                                 </ul>
                             </li>
                             <li><a href="{{route('blog')}}">Blog</a></li>
