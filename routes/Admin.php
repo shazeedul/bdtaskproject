@@ -36,12 +36,19 @@ Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->n
 Route::get('/adminprofile', 'App\Http\Controllers\Admin\AuthController@adminProfile')->name('adminprofile');
 Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editProfile')->name('adminprofile');
 
+
+//User Controller routes
 Route::get('/users', 'App\Http\Controllers\Admin\UsersController@index')->name('users');
 
-
-Route::get('/aboutus', 'App\Http\Controllers\Admin\CmsController@aboutus')->name('aboutus');
+//CMS Controller routes
+Route::get('/about_us', 'App\Http\Controllers\Admin\CmsController@aboutus')->name('aboutus');
 Route::get('/addbanner', 'App\Http\Controllers\Admin\CmsController@addbanner')->name('banner');
 Route::get('/policy', 'App\Http\Controllers\Admin\CmsController@addpolicy')->name('privacypolicy');
 Route::get('/sitemap', 'App\Http\Controllers\Admin\CmsController@addsitemap')->name('sitemap');
 Route::get('/delivery_info', 'App\Http\Controllers\Admin\CmsController@adddeliveryinfo')->name('deliveryinfo');
+
+//Settings Controller routes
+Route::get('/app_settings', 'App\Http\Controllers\Admin\SettingsController@appstg')->name('appsettings');
+Route::get('/sms_settings', 'App\Http\Controllers\Admin\SettingsController@smsstg')->name('smssettings');
+Route::get('/email_settings', 'App\Http\Controllers\Admin\SettingsController@emailstg')->name('emailsettings');
 

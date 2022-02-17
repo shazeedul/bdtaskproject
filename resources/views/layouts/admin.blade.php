@@ -109,7 +109,7 @@
             </a>
 
           </li>
-          <li class="nav-item {{request()->is('neworder')?'menu-open':(request()->is('manageorder')?'menu-open':'')}}">
+          <li class="nav-item {{request()->is('neworder')?'menu-open':(request()->is('manageorder')?'menu-open':(request()->is('addorder')?'menu-open':''))}}">
             <a href="#" class="nav-link {{request()->is('neworder')?'active':(request()->is('manageorder')?'active':(request()->is('addorder')?'active':''))}}">
               <i class="nav-icon fas fa-edit"></i>
               <p>
@@ -186,7 +186,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{request()->is('banner')?'menu-open':(request()->is('aboutus')?'menu-open':(request()->is('deliveryinfo')?'menu-open':(request()->is('deliveryinfo')?'menu-open':'')))}}">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copyright"></i>
               <p>
@@ -237,19 +237,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('appsettings')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>App Settings</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('smssettings')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>SMS Settings</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('emailsettings')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Email Settings</p>
                 </a>

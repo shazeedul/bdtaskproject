@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'About us')
+@section('title', 'Site Map')
 @section('content')
 
 @endsection

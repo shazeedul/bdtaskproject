@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Add Banner')
+@section('title', 'Email Settings')
 @section('content')
 
 @endsection
