@@ -96,7 +96,7 @@
       </div>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
@@ -196,31 +196,31 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('banner')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('aboutus')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>About Us</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('deliveryinfo')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Delivery Information</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('privacypolicy')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Privacy Policy</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('sitemap')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Our Sitemap</p>
                 </a>
