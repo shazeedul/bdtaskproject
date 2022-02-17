@@ -202,9 +202,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('aboutus')}}" class="nav-link ">
+                <a href="{{route('contactus')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>About Us</p>
+                  <p>Contact Us</p>
                 </a>
               </li>
               <li class="nav-item">

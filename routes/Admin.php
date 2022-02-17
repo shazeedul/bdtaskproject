@@ -41,7 +41,7 @@ Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editProf
 Route::get('/users', 'App\Http\Controllers\Admin\UsersController@index')->name('users');
 
 //CMS Controller routes
-Route::get('/about_us', 'App\Http\Controllers\Admin\CmsController@aboutus')->name('aboutus');
+Route::get('/contact_us', 'App\Http\Controllers\Admin\CmsController@contactus')->name('contactus');
 Route::get('/addbanner', 'App\Http\Controllers\Admin\CmsController@addbanner')->name('banner');
 Route::get('/policy', 'App\Http\Controllers\Admin\CmsController@addpolicy')->name('privacypolicy');
 Route::get('/sitemap', 'App\Http\Controllers\Admin\CmsController@addsitemap')->name('sitemap');

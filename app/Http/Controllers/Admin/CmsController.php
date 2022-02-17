@@ -8,21 +8,21 @@ use Illuminate\Http\Request;
 class CmsController extends Controller
 {
     //
-    public function aboutus(){
-        return view('Admin/aboutus');
+    public function contactus(){
+        return view('Admin/contactus');
     }
 
 
     public function addbanner(){
-        return view('Admin/aboutus');
+        return view('Admin/addbanner');
     }
     public function addsitemap(){
-        return view('Admin/aboutus');
+        return view('Admin/oursitemap');
     }
     public function addpolicy(){
-        return view('Admin/aboutus');
+        return view('Admin/privacypolicy');
     }
     public function adddeliveryinfo(){
-        return view('Admin/aboutus');
+        return view('Admin/deliveryinfo');
     }
 }
