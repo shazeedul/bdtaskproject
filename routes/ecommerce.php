@@ -32,3 +32,5 @@ route::get('/shop','App\Http\Controllers\Ecommerce\ShopController@shop')->name('
 route::get('/shopdetails','App\Http\Controllers\Ecommerce\ShopController@shopDetails')->name('shopdetails');
 
 route::get('/shoppingcart','App\Http\Controllers\Ecommerce\ShopController@shopingCart')->name('shoppingcart');
+
+route::get('/privacypolicy','App\Http\Controllers\Ecommerce\PrivacyController@privacyPolicy')->name('privacypolicy');
