@@ -48,15 +48,15 @@
                         </div>
                     </div>
 
-
-                    <div class="hero__item set-bg" data-setbg="{{asset('ecommerce/img/hero/banner.jpg')}}">
+                    @foreach ($showBanner as $value)
+                    <div class="hero__item set-bg" data-setbg="{{ asset('storage/p-image/'.$value->image) }}">
                         <div class="hero__text">
-                            <span>FRUIT FRESH</span>
-                            <h2>Vegetable <br />100% Organic</h2>
-                            <p>Free Pickup and Delivery Available</p>
-                            <a href="#" class="primary-btn">SHOP NOW</a>
+                            <h2><span>{{$value->name}}</span></h2>
+                            <p>{{$value->description}}</p>
                         </div>
                     </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </div>
