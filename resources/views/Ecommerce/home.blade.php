@@ -51,7 +51,7 @@
                     @foreach ($showBanner as $value)
                     <div class="hero__item set-bg" data-setbg="{{ asset('storage/p-image/'.$value->image) }}">
                         <div class="hero__text">
-                            <h2><span>{{$value->name}}</span></h2>
+                            <h2>{{$value->name}}</h2>
                             <p>{{$value->description}}</p>
                         </div>
                     </div>

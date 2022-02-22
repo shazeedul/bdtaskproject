@@ -17,7 +17,7 @@ class BannerTb extends Migration
         Schema::create('banner_tb', function (Blueprint $table) {
             $table->increments('b_id');
             $table->string('name' , 20);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('description' , 450);
             $table->timestamps();
         });
