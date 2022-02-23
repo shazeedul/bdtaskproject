@@ -17,7 +17,7 @@
     <!-- Css Styles -->
     <link rel="stylesheet" href="{{asset('ecommerce/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('ecommerce/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('ecommerce/css/css/elegant-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('ecommerce/css/elegant-icons.css')}}">
     <link rel="stylesheet" href="{{asset('ecommerce/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{asset('ecommerce/css/jquery-ui.min.css')}}">
     <link rel="stylesheet" href="{{asset('ecommerce/css/owl.carousel.min.css')}}">

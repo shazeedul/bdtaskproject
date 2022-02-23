@@ -46,7 +46,7 @@ Route::get('/contact_us', 'App\Http\Controllers\Admin\CmsController@contactus')-
 Route::get('/addbanner', 'App\Http\Controllers\Admin\CmsController@addbanner')->name('banner');
 Route::post('/addbanner', 'App\Http\Controllers\Admin\CmsController@updateBanner')->name('banner');
 
-Route::get('/policy', 'App\Http\Controllers\Admin\CmsController@addpolicy')->name('privacypolicy');
+Route::get('/policy', 'App\Http\Controllers\Admin\CmsController@addpolicy')->name('addprivacypolicy');
 Route::get('/sitemap', 'App\Http\Controllers\Admin\CmsController@addsitemap')->name('sitemap');
 Route::get('/delivery_info', 'App\Http\Controllers\Admin\CmsController@adddeliveryinfo')->name('deliveryinfo');
 

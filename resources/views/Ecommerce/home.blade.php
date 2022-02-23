@@ -48,14 +48,14 @@
                         </div>
                     </div>
 
-                    @foreach ($showBanner as $value)
-                    <div class="hero__item set-bg" data-setbg="{{ asset('storage/p-image/'.$value->image) }}">
+               
+                    <div class="hero__item set-bg" data-setbg="{{ asset('storage/p-image/'.$banner->image) }}">
                         <div class="hero__text">
-                            <h2>{{$value->name}}</h2>
-                            <p>{{$value->description}}</p>
+                            <h2>{{$banner->name}}</h2>
+                            <p class="text-success">{!! $banner->description !!}</p>
                         </div>
                     </div>
-                    @endforeach
+         
                     
                 </div>
             </div>

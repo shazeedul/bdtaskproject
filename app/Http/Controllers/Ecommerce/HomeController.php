@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     public function home(){
-        $data['showBanner'] = DB::table('banner_tb')
+        $data['banner'] = DB::table('banner_tb')
                                 ->select('*')
-                                ->get();
+                                ->first();
         return view('ecommerce/home',$data);
     }
 }

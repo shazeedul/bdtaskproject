@@ -55,7 +55,7 @@ class CmsController extends Controller
         return view('Admin/oursitemap');
     }
     public function addpolicy(){
-        return view('Admin/privacypolicy');
+        return view('Admin/addprivacypolicy');
     }
     public function adddeliveryinfo(){
         return view('Admin/deliveryinfo');
