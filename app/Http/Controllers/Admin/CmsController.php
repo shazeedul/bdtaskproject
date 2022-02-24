@@ -55,8 +55,34 @@ class CmsController extends Controller
         return view('Admin/oursitemap');
     }
     public function addpolicy(){
-        return view('Admin/addprivacypolicy');
+        $data['editPrivacy'] = DB::table('privacy_tb')
+                                ->select('*')
+                                ->first();
+        return view('Admin/addprivacypolicy',$data);
     }
+
+    public function updatePolicy(Request $request){
+        $validated = $request->validate([
+            'header'            => 'required|max:400',
+            'description'       => 'required|max:5000'
+        ]);
+        
+
+        $data = array(
+            'header'            => $request->input('header'),
+            'description'     => $request->input('description')
+        );
+
+        $update = DB::table('privacy_tb')->update($data);
+
+        if($update){
+            return redirect('/addprivacypolicy')->with('status', 'Update Successfully');
+        }else{
+            return redirect('/addprivacypolicy')->with('error', 'Something Went Wrong');
+        }
+
+    }
+
     public function adddeliveryinfo(){
         return view('Admin/deliveryinfo');
     }

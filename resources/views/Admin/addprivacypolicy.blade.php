@@ -11,7 +11,7 @@
                         </div>
                         <div class="text-right">
                             <div class="actions">
-                                <a href="" class="action-item"><i class="ti-reload"></i></a>
+                                <a href="#" class="action-item"><i class="ti-reload"></i></a>
                             </div>
                         </div>
                     </div>
@@ -19,22 +19,22 @@
                 <div class="card-body">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="border_preview">
-                    <form method="POST" enctype="multipart/form-data" action="">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('addprivacypolicy')}}">
                         @csrf
                                     
                         <input type="hidden" name="article_id" value="44" style="display:none;" />
      
                         <div class="form-group row">
-                            <label for="name" class="col-sm-2 col-form-label">Privacy Policy Headings <i class="text-danger">*</i></label>
+                            <label for="header" class="col-sm-2 col-form-label">Privacy Policy Headings <i class="text-danger">*</i></label>
                             <div class="col-sm-10">
-                                <input name="name"  class="form-control" placeholder="Headline" type="text" id="headline">
+                                <input name="header" value="{{$editPrivacy->header}}" class="form-control" placeholder="Headline" type="text" id="headline">
                             </div>
                         </div>
                       
                         <div class="form-group row">
                             <label for="description" class="col-sm-2 col-form-label">Paragraph</label>
                             <div class="col-sm-10">
-                                <textarea id="summernote2" name="description" class="form-control editor" placeholder="Phone" type="text" id="description"></textarea>
+                                <textarea id="summernote2" name="description" class="form-control editor" placeholder="Phone" type="text" id="description">{{$editPrivacy->description}}</textarea>
                             </div>
                         </div>
                         
