@@ -186,8 +186,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item {{request()->is('banner')?'menu-open':(request()->is('contactus')?'menu-open':(request()->is('deliveryinfo')?'menu-open':(request()->is('addprivacypolicy')?'menu-open':(request()->is('sitemap')?'menu-open':''))))}}">
-            <a href="#" class="nav-link {{request()->is('banner')?'active':(request()->is('contactus')?'active':(request()->is('deliveryinfo')?'active':(request()->is('addprivacypolicy')?'active':(request()->is('sitemap')?'active':''))))}}">
+          <li class="nav-item {{request()->is('banner')?'menu-open':(request()->is ('contactus')?'menu-open':(request()->is ('deliveryinfo')?'menu-open':(request()->is ('addprivacypolicy')?'menu-open':(request()->is ('sitemap')?'menu-open':''))))}}">
+            <a href="#" class="nav-link {{request()->is('banner')?'active':(request()->is ('contactus')?'active':(request()->is ('deliveryinfo')?'active':(request()->is('addprivacypolicy')?'active':(request()->is('sitemap')?'active':''))))}}">
               <i class="nav-icon fas fa-copyright"></i>
               <p>
                 CMS

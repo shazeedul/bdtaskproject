@@ -10,7 +10,10 @@ class CmsController extends Controller
 {
     //
     public function contactus(){
-        return view('Admin/contactus');
+        $data['editContact'] = DB::table('contact_tb')
+                                ->select('*')
+                                ->first();
+        return view('Admin/contactus',$data);
     }
 
 
@@ -76,9 +79,9 @@ class CmsController extends Controller
         $update = DB::table('privacy_tb')->update($data);
 
         if($update){
-            return redirect('/addprivacypolicy')->with('status', 'Update Successfully');
+            return redirect('policy')->with('status', 'Update Successfully');
         }else{
-            return redirect('/addprivacypolicy')->with('error', 'Something Went Wrong');
+            return redirect('policy')->with('error', 'Something Went Wrong');
         }
 
     }
