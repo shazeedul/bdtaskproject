@@ -44,7 +44,7 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
+                                <h5>{{$contact->phone}}</h5>
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
@@ -113,10 +113,9 @@
     <!-- Map Begin -->
     <div class="map">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14598.566420900826!2d90.41764857197862!3d23.83134023106288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6422bc83d21%3A0x3a1bc96ce9f8ad8b!2z4KaW4Ka_4Kay4KaV4KeN4Ka34KeH4KakLCDgpqLgpr7gppXgpr4!5e0!3m2!1sbn!2sbd!4v1645846692442!5m2!1sbn!2sbd"
             height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <div class="map-inside">
-            <i class="icon_pin"></i>
             <div class="inside-widget">
                 <h4>Dhaka</h4>
                 <ul>

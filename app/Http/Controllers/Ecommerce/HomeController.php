@@ -12,6 +12,9 @@ class HomeController extends Controller
         $data['banner'] = DB::table('banner_tb')
                                 ->select('*')
                                 ->first();
+        $data['contact'] = DB::table('contact_tb')
+                                ->select('*')
+                                ->first();
         return view('ecommerce/home',$data);
     }
 }

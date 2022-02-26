@@ -62,7 +62,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="active"><a href="{{route('home')}}">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -85,7 +85,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li><i class="fa fa-envelope"></i> {{$contact->email}}</li>
                 <li>Free Shipping for all Order of $99</li>
             </ul>
         </div>
@@ -100,7 +100,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                                <li><i class="fa fa-envelope"></i> {{$contact->email}}</li>
                                 <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
@@ -192,9 +192,9 @@
                             <a href="{{route('home')}}"><img src="{{asset('ecommerce/img/logo.png')}}" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
+                            <li>Address: {{$contact->address}}</li>
+                            <li>Phone: {{$contact->phone}}</li>
+                            <li>Email: {{$contact->email}}</li>
                         </ul>
                     </div>
                 </div>
