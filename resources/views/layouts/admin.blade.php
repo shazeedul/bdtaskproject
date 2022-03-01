@@ -186,8 +186,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item {{request()->is('banner')?'menu-open':(request()->is ('contactus')?'menu-open':(request()->is ('deliveryinfo')?'menu-open':(request()->is ('addprivacypolicy')?'menu-open':(request()->is ('sitemap')?'menu-open':''))))}}">
-            <a href="#" class="nav-link {{request()->is('banner')?'active':(request()->is ('contactus')?'active':(request()->is ('deliveryinfo')?'active':(request()->is('addprivacypolicy')?'active':'')))}}">
+          <li class="nav-item {{request()->is('addbanner')?'menu-open':(request()->is ('contact_us')?'menu-open':(request()->is ('delivery_info')?'menu-open':(request()->is ('policy')?'menu-open':(request()->is ('sitemap')?'menu-open':''))))}}">
+            <a href="#" class="nav-link {{request()->is('addbanner')?'active':(request()->is ('contact_us')?'active':(request()->is ('delivery_info')?'active':(request()->is('policy')?'active':'')))}}">
               <i class="nav-icon fas fa-copyright"></i>
               <p>
                 CMS
@@ -196,33 +196,33 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('banner')}}" class="nav-link {{request()->is('banner')?'active':''}}">
+                <a href="{{route('banner')}}" class="nav-link {{request()->is('addbanner')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('contactus')}}" class="nav-link {{request()->is('contactus')?'active':''}}">
+                <a href="{{route('contactus')}}" class="nav-link {{request()->is('contact_us')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contact Us</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('deliveryinfo')}}" class="nav-link {{request()->is('deliveryinfo')?'active':''}}">
+                <a href="{{route('deliveryinfo')}}" class="nav-link {{request()->is('delivery_info')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Delivery Information</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('addprivacypolicy')}}" class="nav-link {{request()->is('addprivacypolicy')?'active':''}}">
+                <a href="{{route('addprivacypolicy')}}" class="nav-link {{request()->is('policy')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Privacy Policy</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item {{request()->is('appsettings')?'menu-open':(request()->is('smssettings')?'menu-open':(request()->is('emailsettings')?'menu-open':''))}}">
-            <a href="#" class="nav-link {{request()->is('appsettings')?'active':(request()->is('smssettings')?'active':(request()->is('emailsettings')?'active':''))}}">
+          <li class="nav-item {{request()->is('app_settings')?'menu-open':(request()->is('sms_settings')?'menu-open':(request()->is('email_settings')?'menu-open':''))}}">
+            <a href="#" class="nav-link {{request()->is('app_settings')?'active':(request()->is('sms_settings')?'active':(request()->is('email_settings')?'active':''))}}">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Settings
@@ -231,19 +231,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('appsettings')}}" class="nav-link {{request()->is('appsettings')?'active':''}}">
+                <a href="{{route('appsettings')}}" class="nav-link {{request()->is('app_settings')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>App Settings</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('smssettings')}}" class="nav-link {{request()->is('smssettings')?'active':''}}">
+                <a href="{{route('smssettings')}}" class="nav-link {{request()->is('sms_settings')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>SMS Settings</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('emailsettings')}}" class="nav-link {{request()->is('emailsettings')?'active':''}}">
+                <a href="{{route('emailsettings')}}" class="nav-link {{request()->is('email_settings')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Email Settings</p>
                 </a>

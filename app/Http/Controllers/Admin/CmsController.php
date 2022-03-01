@@ -27,7 +27,7 @@ class CmsController extends Controller
     public function updateBanner(Request $request){
         $validated = $request->validate([
             'name'            => 'required|max:250',
-            'description'     => 'required|max:300',
+            'description'     => 'required|max:3000',
             'image'           => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
         if($request->file('image')){
