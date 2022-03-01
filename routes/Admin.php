@@ -14,25 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+//Order Controller routes
 Route::get('/neworder', 'App\Http\Controllers\Admin\OrderController@neworder')->name('neworder');
 Route::get('/manageorder', 'App\Http\Controllers\Admin\OrderController@manageorder')->name('manageorder');
 Route::get('/addorder', 'App\Http\Controllers\Admin\OrderController@addorder')->name('addorder');
 
 Route::get('/invoice', 'App\Http\Controllers\Admin\OrderController@invoice')->name('invoice');
 
+//Product Controller routes
 Route::get('/addproduct', 'App\Http\Controllers\Admin\ProductController@index')->name('addproduct');
 Route::post('/addproduct', 'App\Http\Controllers\Admin\ProductController@addProduct')->name('addproduct');
 Route::get('/manageproduct', 'App\Http\Controllers\Admin\ProductController@manageproduct')->name('manageproduct');
 Route::get('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@editproduct')->name('editproduct');
 Route::put('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@updateProduct')->name('editproduct');
 
+//Category Controller routes
 Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@index')->name('addcategory');
 Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCategory')->name('addcategory');
 Route::get('/editcategory/{id}', 'App\Http\Controllers\Admin\CategoryController@editCategory')->name('editcategory');
 
 Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 
+
+//Admin Controller routes
 Route::get('/adminprofile', 'App\Http\Controllers\Admin\AuthController@adminProfile')->name('adminprofile');
 Route::post('/adminprofile', 'App\Http\Controllers\Admin\AuthController@editProfile')->name('adminprofile');
 
@@ -57,7 +61,7 @@ Route::get('/app_settings', 'App\Http\Controllers\Admin\SettingsController@appst
 Route::get('/sms_settings', 'App\Http\Controllers\Admin\SettingsController@smsstg')->name('smssettings');
 Route::get('/email_settings', 'App\Http\Controllers\Admin\SettingsController@emailstg')->name('emailsettings');
 
-
+//Ticket Controller routes
 Route::get('/ticket', 'App\Http\Controllers\Admin\TicketController@index')->name('ticket');
 
 
