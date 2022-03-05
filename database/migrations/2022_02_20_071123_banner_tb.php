@@ -18,7 +18,7 @@ class BannerTb extends Migration
             $table->increments('b_id');
             $table->string('name' , 20);
             $table->string('image')->nullable();
-            $table->string('description' , 450);
+            $table->string('description' , 3000);
             $table->timestamps();
         });
     }

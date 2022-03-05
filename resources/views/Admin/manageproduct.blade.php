@@ -30,7 +30,7 @@
                             <td>{{ $value->c_name }}</td>
                             <td>{{ $value->b_price }}</td>
                             <td>{{ $value->mrp_price }}</td>
-                            <td>{{ $value->s_price }}</td>
+                            <td>&#2547;{{ $value->s_price }}</td>
                             <td><img src="{{ asset('storage/p-image/'.$value->image) }}" width="50" height="50"></td>
                             <td>{{ $value->quantity }}</td>
                             <td class="project-actions text-right">

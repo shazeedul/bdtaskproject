@@ -71,11 +71,7 @@ class AuthController extends Controller
         
         return view('Admin/adminprofile',$data);
     }
-    // public function editProfile(){
-        
-    //     //
-    //     return view('Admin/adminprofile', $data);
-    // }
+    
 }
 
 

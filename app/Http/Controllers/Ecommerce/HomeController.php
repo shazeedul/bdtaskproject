@@ -15,6 +15,11 @@ class HomeController extends Controller
         $data['contact'] = DB::table('contact_tb')
                                 ->select('*')
                                 ->first();
+        $data['product'] = DB::table('product_tb')
+                                ->select('product_tb.*', 'category_tb.c_name')
+                                ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
+                                ->orderBy('product_tb.p_category','ASC')
+                                ->get();
         return view('ecommerce/home',$data);
     }
 }

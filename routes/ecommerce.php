@@ -30,6 +30,7 @@ route::get('/contact','App\Http\Controllers\Ecommerce\ContactController@contact'
 route::get('/shop','App\Http\Controllers\Ecommerce\ShopController@shop')->name('shop');
 
 route::get('/shopdetails','App\Http\Controllers\Ecommerce\ShopController@shopDetails')->name('shopdetails');
+route::get('/shopdetails/{id}','App\Http\Controllers\Ecommerce\ShopController@productDetails')->name('shopdetails');
 
 route::get('/shoppingcart','App\Http\Controllers\Ecommerce\ShopController@shopingCart')->name('shoppingcart');
 

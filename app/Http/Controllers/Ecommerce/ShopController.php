@@ -20,6 +20,21 @@ class ShopController extends Controller
                                 ->first();
         return view('ecommerce/shopdetails',$data);
     }
+    public function productDetails($id=null){
+        $data['productDetails'] = $product = DB::table('product_tb')
+                                ->select('product_tb.*', 'category_tb.id as c_id', 'category_tb.c_name')
+                                ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
+                                ->where('product_tb.id', $id)
+                                ->first();
+        
+        $data['category'] = DB::table('category_tb')
+                                ->select('c_name', 'id')
+                                ->where('category', '!=', 0)
+                                ->where('status', 1)
+                                ->where('id', '!=', $product->c_id)
+                                ->get();
+        return view('ecommerce/shopdetails', $data);
+    }
     public function shopingCart(){
         $data['contact'] = DB::table('contact_tb')
                                 ->select('*')
