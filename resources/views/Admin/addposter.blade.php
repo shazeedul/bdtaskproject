@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Add Banner')
+@section('title', 'Add Poster')
 @section('content')
 <div class="container-fluid">
     <div class="row card m-4 shadow p-3">
@@ -7,7 +7,7 @@
             <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="fs-17 font-weight-600 mb-0">Edit Banner</h3>
+                        <h3 class="fs-17 font-weight-600 mb-0">Edit Poster</h3>
                     </div>
                     <div class="text-right">
                         <div class="actions">
@@ -19,30 +19,34 @@
             <div class="card-body">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="border_preview">
-                        <form method="POST" enctype="multipart/form-data" action="{{route('banner')}}">
+                        <form method="POST" enctype="multipart/form-data" action="{{route('poster')}}">
                             @csrf
                             <div class="form-group row">
-                                <label for="name" class="col-sm-2 col-form-label">Name <i class="text-danger">*</i></label>
+                                <label for="1st_poster" class="col-sm-2 col-form-label">1st Poster <i class="text-danger">*</i></label>
                                 <div class="col-sm-10">
-                                    <input name="name" value="{{$editBanner->name}}" class="form-control" placeholder="Headline" type="text" id="headline">
+                                    <input type="file" name="poster_image1" value="{{$editPoster->poster_image1}}" accept="image/png, image/gif, image/jpeg" placeholder="Image">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="article1_en" class="col-sm-2 col-form-label">Image</label>
                                 <div class="col-sm-10">
-                                    <img src="{{ asset('storage/p-image/'.$editBanner->image) }}" widh="70" height="70">
-                                    <input type="file" name="image" value="{{$editBanner->image}}" accept="image/png, image/gif, image/jpeg" placeholder="Image">
-                                    <input type="hidden" name="old_image" value="{{$editBanner->image}}">
-                                    
+                                    <img src="{{ asset('storage/poster-image/'.$editPoster->poster_image1) }}" widh="70" height="70">
+                                    <input type="hidden" name="old_image" >
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="description" class="col-sm-2 col-form-label">Headings</label>
+                                <label for="2nd_poster" class="col-sm-2 col-form-label">2nd Poster <i class="text-danger">*</i></label>
                                 <div class="col-sm-10">
-                                    <textarea id="summernote2" name="description" class="form-control editor" placeholder="Phone" type="text" id="description">{{$editBanner->description}}</textarea>
+                                    <input type="file" name="poster_image2" value="{{$editPoster->poster_image2}}" accept="image/png, image/gif, image/jpeg" placeholder="Image">
                                 </div>
                             </div>
-                            
+                            <div class="form-group row">
+                                <label for="article1_en" class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <img src="{{ asset('storage/poster-image/'.$editPoster->poster_image2) }}" widh="70" height="70">
+                                    <input type="hidden" name="old_image" >
+                                </div>
+                            </div>
                             <div class="row" >
                                 <div class="col-sm-12 col-sm-offset-3" align="center">
                                     <a href="" class="btn btn-primary  w-md m-b-5">Cancel</a>

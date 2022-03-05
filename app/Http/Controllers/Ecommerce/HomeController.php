@@ -20,6 +20,10 @@ class HomeController extends Controller
                                 ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
                                 ->orderBy('product_tb.p_category','ASC')
                                 ->get();
+        $data['m_category'] = DB::table('category_tb')
+                                ->select('*')
+                                ->where('status', 1)
+                                ->get();
         return view('ecommerce/home',$data);
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CategoryTb extends Migration
+class PosterTb extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CategoryTb extends Migration
      */
     public function up()
     {
-        Schema::create('category_tb', function (Blueprint $table) {
+        Schema::create('poster_tb', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('c_name' , 255);
-            $table->integer('category');
-            $table->string('image')->nullable();
-            $table->tinyInteger('status')->comment('1 = Active , 0 = Deactive');
+            $table->string('poster_image1')->nullable();
+            $table->string('poster_image2')->nullable();
             $table->timestamps();
         });
     }

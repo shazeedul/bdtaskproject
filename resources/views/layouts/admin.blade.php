@@ -186,8 +186,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item {{request()->is('addbanner')?'menu-open':(request()->is ('contact_us')?'menu-open':(request()->is ('delivery_info')?'menu-open':(request()->is ('policy')?'menu-open':(request()->is ('sitemap')?'menu-open':''))))}}">
-            <a href="#" class="nav-link {{request()->is('addbanner')?'active':(request()->is ('contact_us')?'active':(request()->is ('delivery_info')?'active':(request()->is('policy')?'active':'')))}}">
+          <li class="nav-item {{request()->is('addbanner')?'menu-open':(request()->is ('contact_us')?'menu-open':(request()->is ('delivery_info')?'menu-open':(request()->is ('policy')?'menu-open':(request()->is ('sitemap')?'menu-open':(request()->is ('addposter')?'menu-open':'')))))}}">
+            <a href="#" class="nav-link {{request()->is('addbanner')?'active':(request()->is ('contact_us')?'active':(request()->is ('delivery_info')?'active':(request()->is('policy')?'active':(request()->is('addposter')?'active':''))))}}">
               <i class="nav-icon fas fa-copyright"></i>
               <p>
                 CMS
@@ -217,6 +217,14 @@
                 <a href="{{route('addprivacypolicy')}}" class="nav-link {{request()->is('policy')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Privacy Policy</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('poster')}}" class="nav-link {{request()->is('addposter')?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Poster
+                  </p>
                 </a>
               </li>
             </ul>

@@ -18,7 +18,7 @@ class CategoryController extends Controller
                             ->get();
         
         $data['m_category'] = DB::table('category_tb')
-                            ->select('c_name','id','category','status')
+                            ->select('c_name','id','category','status', 'image')
                             ->where('status', 1)
                             ->get();
         
@@ -29,12 +29,18 @@ class CategoryController extends Controller
             'c_name' => 'required|max:255',
             'category' => 'required|numeric',
             'status' => 'required|numeric',
+            'image'  => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
+
+        $image_name = time().$request->file('image')->getClientOriginalName();
+        
+        $path = $request->file('image')->storeAs('public/c-image',$image_name);
 
         $data = array(
             'c_name' => $request ->input('c_name'),
             'category' => $request ->input('category'),
             'status' => $request ->input('status'),
+            'image'  => $image_name
         );
         
         $insert = DB::table('category_tb') ->insert($data);
@@ -65,14 +71,22 @@ class CategoryController extends Controller
             'c_name' => 'required|max:255',
             'category' => 'required|numeric',
             'status' => 'required|numeric',
+            'image'   => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
         
+        if($request->file('image')){
+            $image_name = time().$request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('public/c-image',$image_name);
+        }else{
+            $image_name = $request->input('old_image');
+        }
         
 
         $data = array(
             'c_name' => $request ->input('c_name'),
             'category' => $request ->input('category'),
             'status' => $request ->input('status'),
+            'image'             => $image_name
         );
         
 

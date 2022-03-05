@@ -20,8 +20,8 @@ class ProductTb extends Migration
             $table->string('p_name' , 255);
             $table->integer('p_category');
             $table->string('image');
-            $table->string('s_description' , 450);
-            $table->string('l_description' , 600);
+            $table->string('s_description' , 3000);
+            $table->string('l_description' , 5000);
             $table->integer('quantity');
             $table->double('b_price' , 8, 2);
             $table->double('mrp_price' , 8, 2);

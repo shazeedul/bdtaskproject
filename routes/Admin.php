@@ -56,6 +56,9 @@ Route::post('/policy', 'App\Http\Controllers\Admin\CmsController@updatePolicy')-
 Route::get('/sitemap', 'App\Http\Controllers\Admin\CmsController@addsitemap')->name('sitemap');
 Route::get('/delivery_info', 'App\Http\Controllers\Admin\CmsController@adddeliveryinfo')->name('deliveryinfo');
 
+Route::get('/addposter', 'App\Http\Controllers\Admin\PosterController@index')->name('poster');
+Route::post('/addposter', 'App\Http\Controllers\Admin\PosterController@updatePoster')->name('poster');
+
 //Settings Controller routes
 Route::get('/app_settings', 'App\Http\Controllers\Admin\SettingsController@appstg')->name('appsettings');
 Route::get('/sms_settings', 'App\Http\Controllers\Admin\SettingsController@smsstg')->name('smssettings');
@@ -63,6 +66,9 @@ Route::get('/email_settings', 'App\Http\Controllers\Admin\SettingsController@ema
 
 //Ticket Controller routes
 Route::get('/ticket', 'App\Http\Controllers\Admin\TicketController@index')->name('ticket');
+
+
+
 
 
 

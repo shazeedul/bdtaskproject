@@ -6,7 +6,7 @@
             <h1>Add Catagory</h1>
         </div>
         <div class="card m-4 shadow p-3">
-            <form action="{{route('addcategory')}}" method="POST">
+            <form action="{{route('addcategory')}}" enctype="multipart/form-data" method="POST">
                 @csrf
                 <div class="form-group row  ">
                     <label for="colFormLabel" class="col-sm-2 font-weight-bold col-form-label">
@@ -30,19 +30,25 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="article1_en" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                        <input type="file" required class="col-lg-10 form-control" id="image" placeholder="Image" name="image">
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="colFormLabe2" class="col-sm-2 font-weight-bold col-form-label">
                         <h5> Status </h5>
                     </label>
-                <div class="form-group ">
-                    <div class="form-check">
+                    <div class="form-group ">
+                        <div class="form-check">
                             <input class="form-check-input" type="radio" value="1" name="status" checked="">
                             <label class="form-check-label">Active</label>
-                    </div>
-                    <div class="form-check">
+                        </div>
+                        <div class="form-check">
                             <input class="form-check-input" type="radio" value="0" name="status">
                             <label class="form-check-label">In Active</label>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="d-flex flex-row-reverse">
                     <button type="submit" class="btn btn-dark m-4 ">Add</button>
@@ -60,6 +66,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Catagory Name</th>
                         <th scope="col">Parent Category</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Action</th>
 
 
@@ -83,6 +90,7 @@
                                 Parent Category
                             @endif
                         </td>
+                        <td><img src="{{ asset('storage/c-image/'.$value->image) }}" width="50" height="50"></td>
                         <td>
                             <button class="btn btn-success" type="submit" {{ $value->status }}>Active</button>
                             <a class="btn btn-primary" href="{{route('editcategory', ['id'=>$value->id])}}"><i class="fas fa-pen-alt"></a></i>

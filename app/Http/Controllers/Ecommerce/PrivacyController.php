@@ -13,6 +13,9 @@ class PrivacyController extends Controller
         $data['privacy'] = DB::table('privacy_tb')
                                 ->select('*')
                                 ->first();
+        $data['contact'] = DB::table('contact_tb')
+                                ->select('*')
+                                ->first();
         return view('ecommerce/privacypolicy',$data);
     }
 }
