@@ -24,33 +24,33 @@
                             <div class="form-group row">
                                 <label for="1st_poster" class="col-sm-2 col-form-label">1st Poster <i class="text-danger">*</i></label>
                                 <div class="col-sm-10">
-                                    <input type="file" name="poster_image1" value="{{$editPoster->poster_image1}}" accept="image/png, image/gif, image/jpeg" placeholder="Image">
+                                    <input type="file" name="poster_image1"  accept="image/png, image/gif, image/jpeg" placeholder="Image">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="article1_en" class="col-sm-2 col-form-label">Image</label>
+                                <label  class="col-sm-2 col-form-label">Image</label>
                                 <div class="col-sm-10">
-                                    <img src="{{ asset('storage/poster-image/'.$editPoster->poster_image1) }}" widh="70" height="70">
-                                    <input type="hidden" name="old_image" >
+                                    <img src="#" widh="70" height="70">
+                                    {{-- <input type="hidden" name="old_image" > --}}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="2nd_poster" class="col-sm-2 col-form-label">2nd Poster <i class="text-danger">*</i></label>
                                 <div class="col-sm-10">
-                                    <input type="file" name="poster_image2" value="{{$editPoster->poster_image2}}" accept="image/png, image/gif, image/jpeg" placeholder="Image">
+                                    <input type="file" name="poster_image2"  accept="image/png, image/gif, image/jpeg" placeholder="Image">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="article1_en" class="col-sm-2 col-form-label">Image</label>
+                                <label  class="col-sm-2 col-form-label">Image</label>
                                 <div class="col-sm-10">
-                                    <img src="{{ asset('storage/poster-image/'.$editPoster->poster_image2) }}" widh="70" height="70">
-                                    <input type="hidden" name="old_image" >
+                                    <img src="#" widh="70" height="70">
+                                    {{-- <input type="hidden" name="old_image" > --}}
                                 </div>
                             </div>
                             <div class="row" >
                                 <div class="col-sm-12 col-sm-offset-3" align="center">
                                     <a href="" class="btn btn-primary  w-md m-b-5">Cancel</a>
-                                    <button type="submit" class="btn btn-success  w-md m-b-5">Update</button>
+                                    <button type="submit" class="btn btn-success  w-md m-b-5">Add</button>
                                 </div>
                             </div>
                         </form>                

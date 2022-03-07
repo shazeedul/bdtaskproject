@@ -57,7 +57,7 @@ Route::get('/sitemap', 'App\Http\Controllers\Admin\CmsController@addsitemap')->n
 Route::get('/delivery_info', 'App\Http\Controllers\Admin\CmsController@adddeliveryinfo')->name('deliveryinfo');
 
 Route::get('/addposter', 'App\Http\Controllers\Admin\PosterController@index')->name('poster');
-Route::post('/addposter', 'App\Http\Controllers\Admin\PosterController@updatePoster')->name('poster');
+Route::post('/addposter', 'App\Http\Controllers\Admin\PosterController@addPoster')->name('poster');
 
 //Settings Controller routes
 Route::get('/app_settings', 'App\Http\Controllers\Admin\SettingsController@appstg')->name('appsettings');

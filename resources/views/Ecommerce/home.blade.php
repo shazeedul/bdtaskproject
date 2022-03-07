@@ -128,12 +128,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="banner__pic">
-                        <img src="{{asset('ecommerce/img/banner/banner-1.jpg')}}" alt="">
+                        <img src="{{asset('storage/poster-image/'.$poster->poster_image1)}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="banner__pic">
-                        <img src="{{asset('ecommerce/img/banner/banner-2.jpg')}}" alt="">
+                        <img src="{{asset('storage/poster-image/'.$poster->poster_image2)}}" alt="">
                     </div>
                 </div>
             </div>

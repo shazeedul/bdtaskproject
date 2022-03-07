@@ -24,6 +24,9 @@ class HomeController extends Controller
                                 ->select('*')
                                 ->where('status', 1)
                                 ->get();
+        $data['poster'] = DB::table('poster_tb')
+                                ->select('*')
+                                ->first();
         return view('ecommerce/home',$data);
     }
 }
