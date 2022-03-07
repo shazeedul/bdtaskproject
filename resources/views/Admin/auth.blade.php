@@ -67,8 +67,8 @@
               
             </div>
             <footer class="text-center ">
-                  <div><b>Copyright &copy; 2022 All rights are reserved.<br> Design by <a class="text-info" href="#">Bdtaskproject</a></b></div>
-                </footer>
+              <div><b>Copyright &copy; 2022 All rights are reserved.<br> Design by <a class="text-info" href="#">Bdtaskproject</a></b></div>
+            </footer>
             <!-- /.card -->
             </div>
           <!--/.col (left) -->

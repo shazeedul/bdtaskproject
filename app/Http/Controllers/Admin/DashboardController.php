@@ -24,7 +24,7 @@ class DashboardController extends Controller
             return redirect('admin');
 
         }
-        // print_r($check);
+        
 
         return view('Admin/dashboard', $data);
 
