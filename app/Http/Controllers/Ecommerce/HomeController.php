@@ -16,17 +16,26 @@ class HomeController extends Controller
                                 ->select('*')
                                 ->first();
         $data['product'] = DB::table('product_tb')
-                                ->select('product_tb.*', 'category_tb.c_name')
+                                ->select('product_tb.*', 'category_tb.c_name as c_name')
                                 ->join('category_tb', 'category_tb.id', '=', 'product_tb.p_category')
-                                ->orderBy('product_tb.p_category','ASC')
                                 ->get();
-        $data['m_category'] = DB::table('category_tb')
+        $data['category'] = DB::table('category_tb')
                                 ->select('*')
                                 ->where('status', 1)
+                                ->where('category', '!=',0)
+                                ->get();
+        $data['category1'] = DB::table('category_tb')
+                                ->select('*')
+                                ->where('status', 1)
+                                ->where('category', 0)
                                 ->get();
         $data['poster'] = DB::table('poster_tb')
                                 ->select('*')
                                 ->first();
+        $data['department'] = DB::table('category_tb')
+                                ->select('*')
+                                ->where('status', 1)
+                                ->get();
         return view('ecommerce/home',$data);
     }
 }

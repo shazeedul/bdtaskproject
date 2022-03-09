@@ -20,9 +20,9 @@ class ProductController extends Controller
     }
     public function addProduct(Request $request){
         $validated = $request->validate([
-            'p_name'            => 'required|max:50',
-            's_description'     => 'required|max:300',
-            'l_description'     => 'required|max:500',
+            'p_name'            => 'required|max:255',
+            's_description'     => 'required|max:3000',
+            'l_description'     => 'required|max:5000',
             'quantity'          => 'required|max:500',
             'b_price'           => 'required|numeric',
             'mrp_price'         => 'required|numeric',

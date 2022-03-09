@@ -47,6 +47,12 @@
                                 <input name="email" value="{{$editContact->email}}" class="form-control" placeholder="Email" type="email" id="email">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="map" class="col-sm-2 col-form-label">Map <i class="text-danger">*</i></label>
+                            <div class="col-sm-10">
+                                <input name="map" value="{{$editContact->map}}" class="form-control" placeholder="Map" type="text" id="map">
+                            </div>
+                        </div>
                         
                         
                         <div class="row" >

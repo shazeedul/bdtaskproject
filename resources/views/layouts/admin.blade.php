@@ -186,8 +186,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item {{request()->is('addbanner')?'menu-open':(request()->is ('contact_us')?'menu-open':(request()->is ('delivery_info')?'menu-open':(request()->is ('policy')?'menu-open':(request()->is ('sitemap')?'menu-open':(request()->is ('addposter')?'menu-open':'')))))}}">
-            <a href="#" class="nav-link {{request()->is('addbanner')?'active':(request()->is ('contact_us')?'active':(request()->is ('delivery_info')?'active':(request()->is('policy')?'active':(request()->is('addposter')?'active':''))))}}">
+          <li class="nav-item {{request()->is('addbanner')?'menu-open':(request()->is ('contact_us')?'menu-open':(request()->is ('delivery_info')?'menu-open':(request()->is ('policy')?'menu-open':(request()->is ('sitemap')?'menu-open':(request()->is ('addposter')?'menu-open':(request()->is ('sociallink')?'menu-open':''))))))}}">
+            <a href="#" class="nav-link {{request()->is('addbanner')?'active':(request()->is ('contact_us')?'active':(request()->is ('delivery_info')?'active':(request()->is('policy')?'active':(request()->is('addposter')?'active':(request()->is('sociallink')?'active':'')))))}}">
               <i class="nav-icon fas fa-copyright"></i>
               <p>
                 CMS
@@ -205,6 +205,12 @@
                 <a href="{{route('contactus')}}" class="nav-link {{request()->is('contact_us')?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contact Us</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('sociallink')}}" class="nav-link {{request()->is('sociallink')?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Social Link</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -260,9 +266,17 @@
           </li>
           <li class="nav-item">
             <a href="{{route('ticket')}}" class="nav-link {{request()->is('ticket')?'active':''}}">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fas fa-comments"></i>
               <p>
                 Ticket
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('subscriber')}}" class="nav-link {{request()->is('subscriber')?'active':''}}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Subscriber
               </p>
             </a>
           </li>

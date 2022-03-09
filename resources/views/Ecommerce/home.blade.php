@@ -11,17 +11,9 @@
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
+                            @foreach ($department as $value)
+                            <li><a href="#">{{$value->c_name}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -64,8 +56,7 @@
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    @foreach ($m_category as $value)
-                    <!-- {{asset('/ogani/img/categories/cat-5.jpg')}} -->
+                    @foreach ($category1 as $value)
                     <div class="col-lg-3">
                         <div class="categories__item set-bg"
                             data-setbg="{{asset('storage/c-image/'.$value->image)}}">
@@ -90,17 +81,20 @@
                     <div class="featured__controls">
                         <ul>
                             <li class="active" data-filter="*">All</li>
-                            <li data-filter=".oranges">Oranges</li>
+                            @foreach ($category as $value)
+                            <li data-filter=".{{str_replace(' ', '-', strtolower($value->c_name));}}">{{$value->c_name}}</li>
+                            @endforeach
+                            {{-- <li data-filter=".oranges">Oranges</li>
                             <li data-filter=".fresh-meat">Fresh Meat</li>
                             <li data-filter=".vegetables">Vegetables</li>
-                            <li data-filter=".fastfood">Fastfood</li>
+                            <li data-filter=".fastfood">Fastfood</li> --}}
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row featured__filter">
                 @foreach ($product as $value)
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix {{str_replace(' ', '-', strtolower($value->c_name));}}">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg"
                             data-setbg="{{asset('storage/p-image/'.$value->image)}}">

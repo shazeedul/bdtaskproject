@@ -13,17 +13,9 @@
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
+                            @foreach ($department as $value)
+                            <li><a href="#">{{$value->c_name}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -113,7 +105,7 @@
     <!-- Map Begin -->
     <div class="map">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14598.566420900826!2d90.41764857197862!3d23.83134023106288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6422bc83d21%3A0x3a1bc96ce9f8ad8b!2z4KaW4Ka_4Kay4KaV4KeN4Ka34KeH4KakLCDgpqLgpr7gppXgpr4!5e0!3m2!1sbn!2sbd!4v1645846692442!5m2!1sbn!2sbd"
+            src="{{$contact->map}}"
             height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <div class="map-inside">
             <div class="inside-widget">

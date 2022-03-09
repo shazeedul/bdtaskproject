@@ -89,4 +89,46 @@ class CmsController extends Controller
     public function adddeliveryinfo(){
         return view('Admin/deliveryinfo');
     }
+
+
+    public function sociallink(){
+        $data['sociallink'] = DB::table('social_tb')
+                            ->select('*')
+                            ->first();
+        return view('Admin/sociallink',$data);
+    }
+
+    public function updateSociallink(Request $request)
+        {
+            $validated = $request->validate([
+                'facebook'     => 'required|url',
+                'twitter'      => 'required|url',
+                'linkedin'     => 'required|url',
+                'instagram'     => 'required|url',
+                'pinterest'    => 'required|url',
+            ]);
+        
+            
+            $data = array(
+                'facebook'          =>  $request->input('facebook'),
+                'twitter'           =>  $request->input('twitter'),
+                'linkedin'          =>  $request->input('linkedin'),
+                'instagram'          =>  $request->input('instagram'),
+                'pinterest'         =>  $request->input('pinterest'),
+            );
+
+            
+
+            $update = DB::table('social_tb')->update($data);
+            if($update){
+                return redirect('sociallink')->with('status','successfully added');
+            }else{
+                return redirect('sociallink')->with('status', 'something went wrong');
+            }
+        }
+
+
+    public function subscriber(){
+        return view('Admin/subscriber');
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ContactTb extends Migration
+class SocialTb extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class ContactTb extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('contact_tb', function (Blueprint $table) {
-            $table->increments('cont_id');
-            $table->string('phone', );
-            $table->string('address', 300);
-            $table->string('map', 500);
-            $table->string('officetime', 250);
-            $table->string('email')->unique();
+        Schema::create('social_tb', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('pinterest')->nullable();
             $table->timestamps();
         });
     }

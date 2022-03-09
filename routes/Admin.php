@@ -47,6 +47,11 @@ Route::get('/users', 'App\Http\Controllers\Admin\UsersController@index')->name('
 //CMS Controller routes
 Route::get('/contact_us', 'App\Http\Controllers\Admin\CmsController@contactus')->name('contactus');
 
+Route::get('/sociallink', 'App\Http\Controllers\Admin\CmsController@sociallink')->name('sociallink');
+Route::post('/sociallink', 'App\Http\Controllers\Admin\CmsController@updateSociallink')->name('sociallink');
+
+Route::get('/subscriber', 'App\Http\Controllers\Admin\CmsController@subscriber')->name('subscriber');
+
 Route::get('/addbanner', 'App\Http\Controllers\Admin\CmsController@addbanner')->name('banner');
 Route::post('/addbanner', 'App\Http\Controllers\Admin\CmsController@updateBanner')->name('banner');
 

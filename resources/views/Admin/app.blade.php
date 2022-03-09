@@ -67,28 +67,9 @@
                                        <div class="text-danger">32x32 px(jpg, jpeg, png, gif, ico)</div>
                                     </div>
                                 </div>
-    
-    
-                                <!-- if setting logo is already uploaded -->
-                                                            <div class="form-group row">
-                                    <label for="logoPreview" class="col-sm-3 col-form-label"></label>
-                                    <div class="col-sm-9">
-                                        <img src="" alt="Picture" class="img-thumbnail" />
-                                    </div>
-                                </div>
                                 
-                                <div class="form-group row">
-                                    <label for="logo" class="col-sm-3 col-form-label">Dashboard Logo</label>
-                                    <div class="col-sm-9">
-                                        <input type="file" name="logo" id="logo">
-                                        <input type="hidden" name="old_logo" value="">
-                                        <div class="text-danger">184x42 px(jpg, jpeg, png, gif, ico)</div>
-                                    </div>
-                                </div>
-    
-    
                                 <!-- if setting Web logo is already uploaded -->
-                                                            <div class="form-group row">
+                                <div class="form-group row">
                                     <label for="logoPreview" class="col-sm-3 col-form-label"></label>
                                     <div class="col-sm-9">
                                         <img src="" alt="Picture" class="img-thumbnail" />
@@ -118,13 +99,6 @@
                                     <label for="office_time" class="col-sm-3 col-form-label">Office Time</label>
                                     <div class="col-sm-9">
                                         <textarea name="office_time" class="form-control"  placeholder="Office Time" maxlength="255" rows="7"></textarea>
-                                    </div>
-                                </div>  
-    
-                                <div class="form-group row">
-                                    <label for="latitude" class="col-sm-3 col-form-label">Latitude, Longitude</label>
-                                    <div class="col-sm-9">
-                                        <input name="latitude" type="text" class="form-control" id="latitude" placeholder="Latitude, Longitude"  value="" >
                                     </div>
                                 </div>
     
