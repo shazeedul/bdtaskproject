@@ -78,7 +78,7 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="{{$sociallink->facebook}}"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-pinterest-p"></i></a>
@@ -108,10 +108,10 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="{{$sociallink->facebook}}"><i class="fa fa-facebook"></i></a>
+                                <a href="{{$sociallink->twitter}}"><i class="fa fa-twitter"></i></a>
+                                <a href="{{$sociallink->linkedin}}"><i class="fa fa-linkedin"></i></a>
+                                <a href="{{$sociallink->pinterest}}"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             {{-- <div class="header__top__right__language">
                                 <img src="{asset('/ecommerce/img/language.png')}}" alt="">
@@ -226,10 +226,10 @@
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                         <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="{{$sociallink->facebook}}"><i class="fa fa-facebook"></i></a>
+                            <a href="{{$sociallink->instagram}}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{$sociallink->twitter}}"><i class="fa fa-twitter"></i></a>
+                            <a href="{{$sociallink->pinterest}}"><i class="fa fa-pinterest"></i></a>
                         </div>
                     </div>
                 </div>

@@ -16,6 +16,9 @@ class ContactController extends Controller
                                 ->select('*')
                                 ->where('status', 1)
                                 ->get();
+        $data['sociallink'] = DB::table('social_tb')
+                                ->select('*')
+                                ->first();
         return view('ecommerce/contact',$data);
     }
 }

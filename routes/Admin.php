@@ -27,11 +27,13 @@ Route::post('/addproduct', 'App\Http\Controllers\Admin\ProductController@addProd
 Route::get('/manageproduct', 'App\Http\Controllers\Admin\ProductController@manageproduct')->name('manageproduct');
 Route::get('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@editproduct')->name('editproduct');
 Route::put('/editproduct/{id}', 'App\Http\Controllers\Admin\ProductController@updateProduct')->name('editproduct');
+Route::get('/deleteproduct/{id}', 'App\Http\Controllers\Admin\ProductController@deleteProduct')->name('deleteproduct');
 
 //Category Controller routes
 Route::get('/addcategory', 'App\Http\Controllers\Admin\CategoryController@index')->name('addcategory');
 Route::post('/addcategory', 'App\Http\Controllers\Admin\CategoryController@addCategory')->name('addcategory');
 Route::get('/editcategory/{id}', 'App\Http\Controllers\Admin\CategoryController@editCategory')->name('editcategory');
+Route::get('/deletecategory/{id}', 'App\Http\Controllers\Admin\CategoryController@deleteCategory')->name('deletecategory');
 
 Route::get('/logout','App\Http\Controllers\Admin\DashboardController@logout')->name('logout');
 

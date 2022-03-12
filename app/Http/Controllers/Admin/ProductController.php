@@ -106,7 +106,6 @@ class ProductController extends Controller
             $image_name = $request->input('old_image');
         }
         
-
         $data = array(
             'p_name'            => $request->input('p_name'),
             's_description'     => $request->input('s_description'),
@@ -119,8 +118,6 @@ class ProductController extends Controller
             'image'             => $image_name
         );
         
-
-
         $update = DB::table('product_tb')->where('id', $id)->update($data);
 
         if($update){
@@ -128,8 +125,15 @@ class ProductController extends Controller
         }else{
             return redirect('editproduct/'.$id)->with('error', 'Something Went Wrong');
         }
+    }
 
+    public function deleteProduct($id){
+        $delete = DB::table('product_tb')->where('id', $id)->delete($id);
 
-
+        if($delete){
+            return redirect('manageproduct')->with('status', 'Delete Successfully');
+        }else{
+            return redirect('manageproduct')->with('error', 'Something Went Wrong');
+        }
     }
 }

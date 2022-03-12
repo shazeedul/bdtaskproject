@@ -18,7 +18,7 @@ class SociallinkSeeder extends Seeder
         DB::table('social_tb')->insert([
             'facebook' => 'https://www.facebook.com/syedshazeedul.islam/',
             'twitter' => 'https://twitter.com/shazeedul/',
-            'linkedin' => 'https://www.linkedin.com/syed-shazeedul/',
+            'linkedin' => 'https://www.linkedin.com/in/syed-shazeedul/',
             'instagram' => 'https://www.instagram.com/syedshazeedul.islam/',
             'pinterest' => 'https://www.pinterest.com/shazeedul/',
             'created_at' => new DateTime(),

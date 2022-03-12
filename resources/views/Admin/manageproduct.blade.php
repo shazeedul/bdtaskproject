@@ -42,7 +42,8 @@
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                
+                                <a class="btn btn-danger btn-sm" href="{{route('deleteproduct', ['id'=>$value->id])}}">
                                     <i class="fas fa-trash">
                                     </i>
                                 </a>

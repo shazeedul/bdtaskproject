@@ -98,8 +98,15 @@ class CategoryController extends Controller
         }else{
             return redirect('editcategory/'.$id)->with('error', 'Something Went Wrong');
         }
+    }
 
+    public function deleteCategory($id){
+        $delete = DB::table('category_tb')->where('id', $id)->delete($id);
 
-
+        if($delete){
+            return redirect('addcategory')->with('status', 'Delete Successfully');
+        }else{
+            return redirect('addcategory')->with('error', 'Something Went Wrong');
+        }
     }
 }
