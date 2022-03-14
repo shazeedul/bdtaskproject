@@ -35,3 +35,5 @@ route::get('/shopdetails/{id}','App\Http\Controllers\Ecommerce\ShopController@pr
 route::get('/shoppingcart','App\Http\Controllers\Ecommerce\ShopController@shopingCart')->name('shoppingcart');
 
 route::get('/privacypolicy','App\Http\Controllers\Ecommerce\PrivacyController@privacyPolicy')->name('privacypolicy');
+
+route::get('/addcart/{id}','App\Http\Controllers\Ecommerce\CartController@privacyPolicy')->name('addCart');

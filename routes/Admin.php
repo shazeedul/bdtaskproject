@@ -67,7 +67,7 @@ Route::get('/addposter', 'App\Http\Controllers\Admin\PosterController@index')->n
 Route::post('/addposter', 'App\Http\Controllers\Admin\PosterController@addPoster')->name('poster');
 
 //Settings Controller routes
-Route::get('/app_settings', 'App\Http\Controllers\Admin\SettingsController@appstg')->name('appsettings');
+Route::get('/app_settings', 'App\Http\Controllers\Admin\AppsettingsController@index')->name('appsettings');
 Route::get('/sms_settings', 'App\Http\Controllers\Admin\SettingsController@smsstg')->name('smssettings');
 Route::get('/email_settings', 'App\Http\Controllers\Admin\SettingsController@emailstg')->name('emailsettings');
 

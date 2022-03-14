@@ -9,9 +9,7 @@ class SettingsController extends Controller
 {
     //
 
-    public function appstg(){
-        return view('Admin/app');
-    }
+    
     public function smsstg(){
         return view('Admin/sms');
     }
