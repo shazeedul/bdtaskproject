@@ -36,4 +36,8 @@ route::get('/shoppingcart','App\Http\Controllers\Ecommerce\ShopController@shopin
 
 route::get('/privacypolicy','App\Http\Controllers\Ecommerce\PrivacyController@privacyPolicy')->name('privacypolicy');
 
-route::get('/addcart/{id}','App\Http\Controllers\Ecommerce\CartController@privacyPolicy')->name('addCart');
+route::get('/addcart/{id}','App\Http\Controllers\Ecommerce\CartController@create')->name('addCart');
+route::get('/cartDelete/{id}','App\Http\Controllers\Ecommerce\CartController@destroy')->name('cartDelete');
+
+
+route::post('/','App\Http\Controllers\Ecommerce\HomeController@addSubscribe')->name('home');

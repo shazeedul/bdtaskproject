@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="border_preview">
-                    <form action="" enctype="multipart/form-data" action="">
+                    <form action="{{route('contactus')}}" method="POST" enctype="multipart/form-data">
                         @csrf              
                         <input type="hidden" name="article_id" value="44" style="display:none;" />
      

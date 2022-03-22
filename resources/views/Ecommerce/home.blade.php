@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    @foreach ($category1 as $value)
+                    @foreach ($category as $value)
                     <div class="col-lg-3">
                         <div class="categories__item set-bg"
                             data-setbg="{{asset('storage/c-image/'.$value->image)}}">
@@ -82,7 +82,7 @@
                         <ul>
                             <li class="active" data-filter="*">All</li>
                             @foreach ($category as $value)
-                            <li data-filter=".{{str_replace(' ', '-', strtolower($value->c_name));}}">{{$value->c_name}}</li>
+                            <li data-filter=".{{str_replace(' ', '-', strtolower(str_replace('&','',$value->c_name)));}}">{{$value->c_name}}</li>
                             @endforeach
                             {{-- <li data-filter=".oranges">Oranges</li>
                             <li data-filter=".fresh-meat">Fresh Meat</li>
@@ -94,14 +94,27 @@
             </div>
             <div class="row featured__filter">
                 @foreach ($product as $value)
-                <div class="col-lg-3 col-md-4 col-sm-6 mix {{str_replace(' ', '-', strtolower($value->c_name));}}">
+                @if($value->sub_id==0)
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 mix {{str_replace(' ', '-', strtolower(str_replace('&','',$value->c_name)));}}">
+                        
+                    @else
+                        @php 
+                           $parent= DB::table('category_tb')
+                                    ->where('id',$value->sub_id)
+                                    ->value('c_name');
+                        @endphp
+                         <div class="col-lg-3 col-md-4 col-sm-6 mix {{str_replace(' ', '-', strtolower(str_replace('&','',$parent)));}}">      
+                        
+                    @endif
+               
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg"
                             data-setbg="{{asset('storage/p-image/'.$value->image)}}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="{{route('addCart',['id'=>$value->id])}}"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">

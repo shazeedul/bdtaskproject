@@ -12,6 +12,9 @@ class ShopController extends Controller
         $data['contact'] = DB::table('contact_tb')
                                 ->select('*')
                                 ->first();
+        $data['appSettings'] = DB::table('appsetting_tb')
+                                ->select('*')
+                                ->first();
         $data['department'] = DB::table('category_tb')
                                 ->select('*')
                                 ->where('status', 1)
@@ -42,10 +45,21 @@ class ShopController extends Controller
                                 ->get();
         return view('ecommerce/shopdetails', $data);
     }
-    public function shopingCart(){
+    public function shopingCart(Request $request){
         $data['contact'] = DB::table('contact_tb')
                                 ->select('*')
                                 ->first();
+        $data['appSettings'] = DB::table('appsetting_tb')
+                                ->select('*')
+                                ->first();
+        $data['department'] = DB::table('category_tb')
+                                ->select('*')
+                                ->where('status', 1)
+                                ->get();
+        $data['sociallink'] = DB::table('social_tb')
+                                ->select('*')
+                                ->first();
+        $data['cart'] = $request->session()->get('cart');
         return view('ecommerce/shopingcart',$data);
     }
     

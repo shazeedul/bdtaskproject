@@ -16,7 +16,7 @@ class ContactTb extends Migration
         //
         Schema::create('contact_tb', function (Blueprint $table) {
             $table->increments('cont_id');
-            $table->string('phone', );
+            $table->string('phone');
             $table->string('address', 300);
             $table->string('map', 500);
             $table->string('officetime', 250);

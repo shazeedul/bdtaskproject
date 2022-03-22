@@ -12,6 +12,9 @@ class BlogController extends Controller
         $data['contact'] = DB::table('contact_tb')
                                 ->select('*')
                                 ->first();
+        $data['appSettings'] = DB::table('appsetting_tb')
+                                ->select('*')
+                                ->first();
         $data['department'] = DB::table('category_tb')
                                 ->select('*')
                                 ->where('status', 1)

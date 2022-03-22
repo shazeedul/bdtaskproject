@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ecommerce @yield('title')</title>
-
+    <link rel="shortcut icon" href="{{asset('storage/app-image/'.$appSettings->fav_img)}}" type="image/x-icon">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -41,7 +41,7 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>{{ !(session()->get('cart'))?'0':count(session()->get('cart'))}}</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
@@ -86,7 +86,7 @@
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> {{$contact->email}}</li>
-                <li>Free Shipping for all Order of $99</li>
+                <li>{{$appSettings->office_time}}</li>
             </ul>
         </div>
     </div>
@@ -101,7 +101,7 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> {{$contact->email}}</li>
-                                <li>Free Shipping for all Order of $99</li>
+                                <li>{{$appSettings->office_time}}</li>
                             </ul>
                         </div>
                     </div>
@@ -135,24 +135,24 @@
                 <div class="col-lg-3">
                     <div class="header__logo">
                         
-                        <a href="{{route('home')}}"><img src="{{asset('/ecommerce/img/logo.png')}}" alt=""></a>
+                        <a href="{{route('home')}}"><img src="{{asset('storage/app-image/'.$appSettings->site_logo)}}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="{{route('home')}}">Home</a></li>
-                            <li><a href="{{route('shop')}}">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                            <li class="{{request()->is('/') ? 'active': ''}}"><a href="{{route('home')}}">Home</a></li>
+                            <li class="{{ request()->is('shop') ? 'active' : '' }}"><a href="{{route('shop')}}">Shop</a></li>
+                            <li class="{{request()->is('shoppingcart') ? 'active' :(request()->is('checkout') ? 'active' : '') }}"><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     {{-- <li><a href="{{route('shopdetails')}}">Shop Details</a></li> --}}
-                                    <li><a href="{{route('shoppingcart')}}">Shoping Cart</a></li>
-                                    <li><a href="{{route('checkout')}}">Check Out</a></li>
+                                    <li class="{{ (request()->is('shoppingcart')) ? 'active' : '' }}"><a href="{{route('shoppingcart')}}">Shoping Cart</a></li>
+                                    <li class="{{ (request()->is('checkout')) ? 'active' : '' }}"><a href="{{route('checkout')}}">Check Out</a></li>
                                     {{-- <li><a href="{{route('blogdetails')}}">Blog Details</a></li> --}}
                                 </ul>
                             </li>
-                            <li><a href="{{route('blog')}}">Blog</a></li>
-                            <li><a href="{{route('contact')}}">Contact</a></li>
+                            <li class="{{ request()->is('blog') ? 'active' : '' }}"><a href="{{route('blog')}}">Blog</a></li>
+                            <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{route('contact')}}">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -160,7 +160,7 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="{{route('shoppingcart')}}"><i class="fa fa-shopping-bag"></i> <span>{{ !(session()->get('cart'))?'0':count(session()->get('cart'))}}</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -221,8 +221,9 @@
                     <div class="footer__widget">
                         <h6>Join Our Newsletter Now</h6>
                         <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
+                        <form action="{{route('home')}}" method="post">
+                            @csrf
+                            <input type="text" name="email" placeholder="Enter your mail">
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                         <div class="footer__widget__social">
@@ -238,7 +239,7 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            {{$appSettings->copyright_text}}
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
                         <div class="footer__copyright__payment"><img src="{{asset('ecommerce/img/payment-item.png')}}" alt=""></div>
                     </div>

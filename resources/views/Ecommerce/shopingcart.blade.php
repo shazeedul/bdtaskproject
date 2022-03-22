@@ -81,72 +81,36 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="{{asset('ecommerce/img/cart/cart-1.jpg')}}" alt="">
-                                        <h5>Vegetable’s Package</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $55.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
+                                @foreach($cart as $item)
+                                    @php 
+                                        $data = DB::table('product_tb')
+                                                ->select('*')
+                                                ->where('id',$item['p_id'])
+                                                ->first();
+                                    @endphp
+                                    <tr>
+                                        <td class="shoping__cart__item">
+                                            <img src="{{asset('storage/p-image/'.$data->image)}}" width="70px" alt="">
+                                            <h5>{{$data->p_name}}</h5>
+                                        </td>
+                                        <td class="shoping__cart__price">
+                                            &#2547; {{$data->s_price}}
+                                        </td>
+                                        <td class="shoping__cart__quantity">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <input type="text" value="{{$item['quantity']}}">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $110.00
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span class="icon_close"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src=" {{asset('ecommerce/img/cart/cart-2.jpg')}}" alt="">
-                                        <h5>Fresh Garden Vegetable</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $39.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $39.99
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span class="icon_close"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src=" {{asset('ecommerce/img/cart/cart-3.jpg')}}" alt="">
-                                        <h5>Organic Bananas</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $69.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $69.99
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span class="icon_close"></span>
-                                    </td>
-                                </tr>
+                                        </td>
+                                        <td class="shoping__cart__total">
+                                            &#2547; {{$item['quantity']*$data->s_price}}
+                                        </td>
+                                        <td class="shoping__cart__item__close">
+                                            <a href="{{route('cartDelete', ['id'=>$item['p_id']])}}"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

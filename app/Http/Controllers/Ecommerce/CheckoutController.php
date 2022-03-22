@@ -12,6 +12,12 @@ class CheckoutController extends Controller
         $data['contact'] = DB::table('contact_tb')
                                 ->select('*')
                                 ->first();
+        $data['sociallink'] = DB::table('social_tb')
+                                ->select('*')
+                                ->first();
+        $data['appSettings'] = DB::table('appsetting_tb')
+                                ->select('*')
+                                ->first();
         return view('ecommerce/checkout',$data);
     }
 }

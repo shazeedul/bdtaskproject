@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 class CmsController extends Controller
 {
     //
-    public function contactus(){
+    public function contactus()
+    {
         $data['editContact'] = DB::table('contact_tb')
                                 ->select('*')
                                 ->first();
@@ -17,12 +18,41 @@ class CmsController extends Controller
     }
 
 
+    public function updateContact(Request $request)
+    {
+        $validated = $request->validate([
+            'phone'        => 'required|max:20',
+            'email'        => 'required|max:20',
+            'address'        => 'required|max:300',
+            'officetime'        => 'required|max:250',
+            'map'        => 'required|max:500',
+        ]);
+        
+        
+        $data = array(
+            'phone'        => $request->input('phone'),
+            'email'        => $request->input('email'),
+            'address'      => $request->input('address'),
+            'officetime'     => $request->input('officetime'),
+            'map'     => $request->input('map'),
+        );
+       $update = DB::table('contact_tb')-> update($data);
+       if( $update){
+            return redirect('contact_us')->with('status', 'Successfully Added');
+       }else{
+            return redirect('contact_us')->with('error', 'Something Went Wrong');
+       }
+        
+    }
+
     public function addbanner(){
         $data['editBanner'] = DB::table('banner_tb')
                                 ->select('*')
                                 ->first();
         return view('Admin/addbanner',$data);
     }
+
+    
 
     public function updateBanner(Request $request){
         $validated = $request->validate([
@@ -128,7 +158,4 @@ class CmsController extends Controller
         }
 
 
-    public function subscriber(){
-        return view('Admin/subscriber');
-    }
 }
