@@ -13,13 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/admin', 'App\Http\Controllers\Admin\AuthController@index')->name('adminlogin');
 Route::post('/admin', 'App\Http\Controllers\Admin\AuthController@postLogin')->name('adminlogin');
 
 
-Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard')->middleware('preventlogin');
+Route::get('/admin_dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('adminDashboard')->middleware('preventlogin');
 
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

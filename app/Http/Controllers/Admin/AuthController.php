@@ -17,7 +17,7 @@ class AuthController extends Controller
         $check = Session::get('admin');
         if($check){
 
-            return redirect('dashboard');
+            return redirect('admin_dashboard');
 
         }
         return view('Admin/auth');
@@ -49,7 +49,7 @@ class AuthController extends Controller
                         $request->session()->put('admin', (object)$data);
                         
                         
-                        return redirect('dashboard')->with('status', 'Welcome Back- '.$admin->f_name." ".$admin->l_name);
+                        return redirect('admin_dashboard')->with('status', 'Welcome Back- '.$admin->f_name." ".$admin->l_name);
 
                      
 

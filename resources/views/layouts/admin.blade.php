@@ -100,7 +100,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link {{request()->is('dashboard')?'active':''}}">
+            <a href="{{route('adminDashboard')}}" class="nav-link {{request()->is('admin_dashboard')?'active':''}}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
