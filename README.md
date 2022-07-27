@@ -9,6 +9,8 @@
 
 ## About Laravel
 
+<img src="./public/dist/img/avater.png">
+
 ```
 <!-- Content Header (Page header) -->
 <div class="content-header">
